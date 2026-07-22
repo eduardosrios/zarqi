@@ -1,0 +1,34 @@
+# Local agent and planning files
+AGENTS.md
+IGNORE.MD
+prompt*.txt
+*.prompt.txt
+*_prompt.txt
+
+# Reference and research material
+referencias/
+references/
+screenshots/
+screenshots-references/
+dont-create-like-this/
+used/
+
+# Backups and archives
+*.zip
+*.rar
+*.7z
+*.bak
+*.backup
+niched-alternative/
+
+# Temporary and system files
+.DS_Store
+Thumbs.db
+*.tmp
+*.temp
+*.log
+
+# Dependency folders, if tooling is temporarily used
+node_modules/
+.vendor/
+.cache/
