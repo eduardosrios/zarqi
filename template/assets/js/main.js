@@ -127,6 +127,20 @@
     });
   }
 
+
+  function setupResponsiveRefresh() {
+    if (!window.ScrollTrigger) {
+      return;
+    }
+
+    var refreshTimer;
+    $(window).on('load resize orientationchange', function () {
+      window.clearTimeout(refreshTimer);
+      refreshTimer = window.setTimeout(function () {
+        window.ScrollTrigger.refresh();
+      }, 180);
+    });
+  }
   $(function () {
     var $links = $('.nav-link[href^="#"], .mobile-links a[href^="#"]');
 
@@ -165,5 +179,6 @@
     setupCounters();
     setupGallery();
     setupGsap();
+    setupResponsiveRefresh();
   });
 })(window.jQuery);
