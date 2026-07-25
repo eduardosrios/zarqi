@@ -2071,3 +2071,23 @@ img {
     padding: 18px;
   }
 }
+@media (max-width: 575.98px) {
+  .footer-bottom,
+  .footer-bottom nav {
+    min-width: 0;
+  }
+
+  .footer-bottom span,
+  .footer-bottom a,
+  .footer-contact a,
+  .footer-contact span,
+  .mobile-links a {
+    overflow-wrap: anywhere;
+  }
+
+  .footer-bottom nav a {
+    min-height: 28px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
