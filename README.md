@@ -59,6 +59,11 @@ Suggested topics:
 ```text
 architecture, interior-design, exterior-design, urban-design, html, css, javascript, static-website, front-page, website-template
 ```
+
+## Responsive QA
+
+Stage 06 responsive QA covers wide desktop, standard desktop, iPad Pro, iPad, iPhone 6, and iPhone 5 viewport classes. The current template has been checked for horizontal page overflow, fixed topbar layering, mobile menu fit, section width fit, hero behavior, and footer behavior across those viewport classes.
+
 ## License
 
 This project is proprietary and all rights are reserved.
