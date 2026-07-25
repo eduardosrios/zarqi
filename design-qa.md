@@ -232,3 +232,44 @@ Verification:
 - Bootstrap lightbox modal present: true.
 - No `opacity: 0` or `autoAlpha` hiding remains in project JS/CSS.
 - ETAPA 05 screenshots: `tmp/etapa05-desktop-pass-02.png`, `tmp/etapa05-mobile.png`, `tmp/etapa05-qa.png`.
+# ETAPA 06 QA
+
+Status: passed for ETAPA 06.
+
+Responsive work completed:
+- Added ultra-wide layout constraints for very large desktop screens.
+- Added iPad Pro and tablet hero rules to prevent the hero headline, CTA copy, and stat panel from colliding.
+- Reworked phone hero flow so the headline, CTA, support copy, stat grid, and featured project card fit cleanly at iPhone 6 and iPhone 5 widths.
+- Added very narrow phone rules for 320px layouts.
+- Added touch-device sizing and removed hover lift on coarse/no-hover devices.
+- Tightened mobile contact form, lightbox, footer, and footer navigation wrapping.
+- Added responsive `ScrollTrigger.refresh()` on load, resize, and orientation changes.
+- Added image decoding hints and high-priority hero image loading in `index.html`.
+
+Required viewport review:
+- Very wide: 1920 x 1400.
+- Desktop: 1440 x 1100.
+- iPad Pro: 1024 x 1366.
+- iPad: 768 x 1024.
+- iPhone 6: 375 x 667.
+- iPhone 5: 320 x 568.
+
+Five final responsive review loops:
+1. Passed all six viewports: no horizontal overflow, 36 body sections present, footer present, vendor scripts loaded.
+2. Passed all six viewports: no horizontal overflow, 36 body sections present, footer present, vendor scripts loaded.
+3. Passed all six viewports: no horizontal overflow, 36 body sections present, footer present, vendor scripts loaded.
+4. Passed all six viewports: no horizontal overflow, 36 body sections present, footer present, vendor scripts loaded.
+5. Passed all six viewports: no horizontal overflow, 36 body sections present, footer present, vendor scripts loaded; final hero and footer evidence captured.
+
+Verification:
+- Loop audit JSON: `tmp/etapa06-five-loop-responsive-audit.json`.
+- Initial viewport sheet: `tmp/etapa06-before-contact-sheet.png`.
+- First post-fix viewport sheet: `tmp/etapa06-after-1-contact-sheet.png`.
+- Final hero sheet: `tmp/etapa06-final-hero-contact-sheet.png`.
+- Final footer element sheet: `tmp/etapa06-final-footer-clip-contact-sheet.png`.
+- Footer element clips captured from `.site-footer` at all six viewport sizes.
+- All final loop checks reported `scrollWidth == clientWidth` and `offenderCount: 0`.
+
+Residual notes:
+- The in-app browser connection was unavailable in this session, so exact viewport QA used temporary local headless Chrome sessions and document-level layout metrics.
+- Temporary screenshots and audit JSON remain in `tmp/` and are intentionally not committed.
