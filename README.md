@@ -1,30 +1,20 @@
 # zarqi
 
-zarqi is a refined website project for an architecture and design brand focused on architecture, interior design, exterior design, and urban design.
+zarqi is a refined static front page for an architecture and design studio focused on architecture, interior design, exterior design, and urban design.
 
-This repository is being prepared for a static front page built with plain HTML, CSS, and JavaScript. The website template implementation has not started yet; repository documentation and governance files are being established first.
+The template is built with plain HTML, CSS, and JavaScript. It uses Bootstrap, jQuery, Font Awesome, SimpleBar, curated image assets, and local icon/image assets where the design calls for them.
 
 ## Project Scope
 
-- Static front page website
+- Static front page website template
 - Plain HTML, CSS, and JavaScript
-- No React
+- Bootstrap-based responsive layout
 - Architecture, interior design, exterior design, and urban design positioning
 - English-only project documentation and website content
 
 ## Repository Status
 
-Initial repository setup is in progress. Website source files will be added only after the project implementation instructions are complete.
-
-## Repository About Text
-
-Suggested GitHub repository description:
-
-zarqi - Architecture, interior, exterior, and urban design website built with HTML, CSS, and JavaScript.
-
-Suggested topics:
-
-architecture, interior-design, exterior-design, urban-design, html, css, javascript, static-website, front-page, website-template
+The front page template is now under active implementation and visual refinement. The repository contains the website template source and required governance files only.
 
 ## License
 
