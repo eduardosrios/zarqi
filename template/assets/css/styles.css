@@ -967,7 +967,7 @@ img {
 .materials-lab {
   display: grid;
   grid-template-columns: minmax(0, .85fr) minmax(280px, .5fr) minmax(260px, .45fr);
-  gap: clamp(28px, 4vw, 64px);
+  gap: clamp(30px, 4vw, 64px);
   align-items: end;
 }
 
@@ -1127,7 +1127,7 @@ img {
 .technical-grid {
   display: grid;
   grid-template-columns: minmax(0, .8fr) minmax(320px, .7fr);
-  gap: 46px;
+  gap: clamp(30px, 4vw, 48px);
 }
 
 .technical-list,
@@ -1207,7 +1207,7 @@ img {
 .urban-map {
   display: grid;
   grid-template-columns: minmax(0, .65fr) minmax(360px, .7fr) minmax(260px, .45fr);
-  gap: 42px;
+  gap: clamp(30px, 4vw, 48px);
   align-items: center;
 }
 
