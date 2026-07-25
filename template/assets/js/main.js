@@ -226,6 +226,30 @@
       }, 180);
     });
   }
+  function scrollToHashTarget(hash) {
+    if (!hash || hash === '#') {
+      return false;
+    }
+
+    var target = document.querySelector(hash);
+    if (!target) {
+      return false;
+    }
+
+    var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var nav = document.querySelector('.hero-navbar');
+    var navHeight = nav ? nav.getBoundingClientRect().height : 0;
+    var offset = navHeight + 28;
+    var top = hash === '#home' ? 0 : window.pageYOffset + target.getBoundingClientRect().top - offset;
+
+    window.scrollTo({
+      top: Math.max(0, Math.round(top)),
+      behavior: prefersReducedMotion ? 'auto' : 'smooth'
+    });
+
+    return true;
+  }
+
   $(function () {
     var $links = $('.nav-link[href^="#"], .mobile-links a[href^="#"]');
 
