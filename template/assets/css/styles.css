@@ -4519,3 +4519,28 @@ body.has-fixed-topbar .hero-frame {
 .site-footer {
   scroll-margin-top: 112px;
 }
+
+@media (max-width: 1199.98px) {
+  .reference-link.reference-link-cropped,
+  .reference-link.reference-link-original,
+  .reference-link.reference-link-cropped:visited,
+  .reference-link.reference-link-original:visited,
+  .reference-link.reference-link-cropped:hover,
+  .reference-link.reference-link-original:hover,
+  .reference-link.reference-link-cropped:focus,
+  .reference-link.reference-link-original:focus,
+  .reference-link.reference-link-cropped:focus-visible,
+  .reference-link.reference-link-original:focus-visible,
+  .reference-link.reference-link-cropped:active,
+  .reference-link.reference-link-original:active {
+    display: none !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .hero-frame,
+  .body-section,
+  .site-footer {
+    scroll-margin-top: 96px;
+  }
+}
