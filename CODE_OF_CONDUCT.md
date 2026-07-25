@@ -22,8 +22,15 @@ All participants are expected to communicate with care, stay on topic, and avoid
 - Spam, abuse, or unrelated promotion.
 - Any conduct that would be inappropriate in a professional setting.
 
+
+## Project Context
+
+zarqi is maintained as a proprietary website template project. Discussion should remain focused on implementation quality, visual fidelity, accessibility, security, and maintainability.
+
+Do not post private client material, paid reference assets, account credentials, or unrelated promotional content in project discussions.
 ## Enforcement
 
 Project maintainers may remove comments, reject contributions, or restrict participation when behavior conflicts with this Code of Conduct.
 
 To report an issue, contact the repository owner through the available GitHub profile or repository contact channel.
+
