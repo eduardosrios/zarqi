@@ -253,10 +253,14 @@
   $(function () {
     var $links = $('.brand-lockup[href^="#"], .nav-link[href^="#"], .nav-submenu a[href^="#"], .mobile-links a[href^="#"], .hero-actions a[href^="#"], .nav-cta[href^="#"], .site-footer a[href^="#"]');
 
-    $links.on('click', function () {
+    $links.on('click', function (event) {
       var target = $(this).attr('href');
       if (!target || target === '#') {
         return;
+      }
+
+      if (scrollToHashTarget(target)) {
+        event.preventDefault();
       }
 
       $('.nav-pill .nav-link').removeClass('active');
