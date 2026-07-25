@@ -33,9 +33,20 @@ template/
 ```
 
 The `template/` directory is the deliverable website template. Reference screenshots, local automation files, prompt notes, and temporary files are intentionally excluded from repository publishing.
+
+## Local Preview
+
+Open `template/index.html` through the local web server path used by this project:
+
+```text
+http://localhost/templates/Architecture/template/index.html
+```
+
+Reference buttons inside the template use `http://localhost/templates/Architecture/...` links so cropped and original reference images can be opened directly in the browser during visual QA.
 ## License
 
 This project is proprietary and all rights are reserved.
 
 You may view the source code on GitHub, but you are not permitted to use, copy, modify, distribute, commercialize, or create derivative works from this project without prior written permission.
+
 
