@@ -44,7 +44,7 @@
           <h2 class="offcanvas-title h5" id="mobileMenuLabel">zarqi</h2>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <div class="offcanvas-body">
+        <div class="offcanvas-body" data-simplebar data-simplebar-auto-hide="false">
           <nav class="mobile-links" aria-label="Mobile navigation">
             <a href="#home" data-bs-dismiss="offcanvas">Home</a>
             <a href="#about" data-bs-dismiss="offcanvas">About</a>
@@ -219,10 +219,12 @@
     <div class="modal-dialog modal-dialog-centered modal-xl">
       <div class="modal-content">
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-        <img decoding="async" src="assets/img/hero-residence.jpg" alt="Selected project preview" id="projectLightboxImage">
-        <div class="lightbox-caption">
-          <p class="section-kicker" id="projectLightboxLabel">Project preview</p>
-          <h2 id="projectLightboxTitle">zarqi project</h2>
+        <div class="lightbox-scroll" data-simplebar data-simplebar-auto-hide="false">
+          <img decoding="async" src="assets/img/hero-residence.jpg" alt="Selected project preview" id="projectLightboxImage">
+          <div class="lightbox-caption">
+            <p class="section-kicker" id="projectLightboxLabel">Project preview</p>
+            <h2 id="projectLightboxTitle">zarqi project</h2>
+          </div>
         </div>
       </div>
     </div>

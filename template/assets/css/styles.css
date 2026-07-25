@@ -2091,3 +2091,19 @@ img {
     align-items: center;
   }
 }
+.offcanvas-body[data-simplebar] {
+  min-height: 0;
+}
+
+.offcanvas-body[data-simplebar] .simplebar-content {
+  min-height: 100%;
+}
+
+.lightbox-scroll {
+  max-height: min(820px, calc(100vh - 28px));
+  overflow: auto;
+}
+
+.lightbox-scroll .simplebar-content {
+  display: grid;
+}
