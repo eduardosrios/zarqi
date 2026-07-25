@@ -273,3 +273,29 @@ Verification:
 Residual notes:
 - The in-app browser connection was unavailable in this session, so exact viewport QA used temporary local headless Chrome sessions and document-level layout metrics.
 - Temporary screenshots and audit JSON remain in `tmp/` and are intentionally not committed.
+# ETAPA 04C QA
+
+Status: passed for ETAPA 04C distance adjustments.
+
+Spacing changes completed:
+- Added shared spacing rhythm tokens around the Bootstrap `30px` gap baseline.
+- Standardized repeated layout grids to use `--gap-unit: 30px` where appropriate.
+- Kept intentionally tight component spacing on compact tokens instead of forcing every small gap to 30px.
+- Harmonized major multi-column gaps for materials, technical, urban, body split, and footer layouts.
+- Tuned mobile section stack spacing, mobile section padding, footer gaps, and compact footer navigation rhythm.
+
+Distance review loop:
+1. Passed desktop, iPad, and phone checks for computed spacing rhythm.
+2. Passed desktop, iPad, and phone checks for computed spacing rhythm.
+3. Passed desktop, iPad, and phone checks for computed spacing rhythm.
+
+General final review loop:
+1. Passed desktop, iPad, and phone checks: no horizontal overflow, 36 body sections, footer present, Bootstrap/jQuery/SimpleBar loaded.
+2. Passed desktop, iPad, and phone checks: no horizontal overflow, 36 body sections, footer present, Bootstrap/jQuery/SimpleBar loaded.
+3. Passed desktop, iPad, and phone checks: no horizontal overflow, 36 body sections, footer present, Bootstrap/jQuery/SimpleBar loaded.
+
+Verification:
+- Loop audit JSON: `tmp/etapa04c-spacing-review-loops.json`.
+- Desktop computed values included `gapUnit: 30px`, `projectRowGap: 30px`, `principlesGap: 30px`, `expertiseGap: 30px`.
+- Phone computed values preserved compact local spacing where needed while keeping repeated layout grids at `30px`.
+- All final general checks reported `scrollWidth == clientWidth` and `offenders: 0`.
