@@ -1,4 +1,5 @@
 # Local agent and planning files
+dev-instructions/
 AGENTS.md
 IGNORE.MD
 prompt*.txt
@@ -6,6 +7,8 @@ prompt*.txt
 *_prompt.txt
 
 # Reference and research material
+images/
+fonts/
 referencias/
 references/
 screenshots/
@@ -22,6 +25,7 @@ used/
 niched-alternative/
 
 # Temporary and system files
+test-results/
 .DS_Store
 Thumbs.db
 *.tmp
@@ -34,5 +38,8 @@ node_modules/
 .cache/
 
 # Local automation scratch files
+design-qa.md
 tmp/
+
+
 
