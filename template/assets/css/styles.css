@@ -20,7 +20,7 @@
   --button-pad-y: 14px;
   --button-pad-x: 24px;
   --font-body: "Manrope", sans-serif;
-  --font-accent: "Cormorant Garamond", serif;
+  --font-accent: "Manrope", sans-serif;
   --gap-unit: 30px;
   --gap-compact: 18px;
   --gap-tight: 12px;
@@ -2771,6 +2771,123 @@ body {
   .featured-card p,
   .studio-note p,
   .principle-card p,
+  .footer-contact a,
+  .footer-contact span,
+  .footer-bottom a,
+  .footer-bottom span {
+    line-height: 1.66;
+  }
+}
+
+/* ETAPA 04A: single-font scale normalization. */
+body,
+button,
+input,
+select,
+textarea {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.58;
+}
+
+body :not(i):not(.fa):not(.fas):not(.far):not(.fab):not(.fa-solid):not(.fa-regular):not(.fa-brands):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+  font-family: var(--font-body);
+}
+
+.eyebrow,
+.section-kicker,
+.card-kicker,
+.nav-pill .nav-link,
+.nav-cta,
+.hero-btn,
+.btn,
+.filter-chip,
+.mobile-links a,
+.body-section p,
+.body-section li,
+.featured-card p,
+.project-row span,
+.team-grid span,
+.spec-table span,
+.spec-table em,
+.technical-list span,
+.contact-form label,
+.contact-form input,
+.contact-form select,
+.contact-form button,
+.footer-contact a,
+.footer-contact span,
+.footer-bottom a,
+.footer-bottom span,
+.lightbox-caption p,
+.faq-answer {
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 1.62;
+}
+
+.body-close span,
+.project-showcase p,
+.stat-item span,
+.principle-card p,
+.section-head p,
+.split-note p,
+.stack-list p,
+.journey-line p,
+.footer-brand-block p {
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 1.6;
+}
+
+.faq-list button,
+.hero-studio-row p,
+.timeline-row span {
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: 1.45;
+}
+
+.visual-grid article,
+.location-grid article,
+.reference-link {
+  font-size: 24px !important;
+  letter-spacing: 0;
+  line-height: 1.18;
+}
+
+.brand-text,
+.stat-item strong,
+.section-meta span:first-child,
+.principle-head span,
+.stat-ribbon strong,
+.awards-band strong,
+.process-grid span,
+.stack-list span,
+.journey-line span,
+.quote-band blockquote {
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: 1.18;
+}
+
+.footer-cta h2,
+.quote-band blockquote {
+  font-family: var(--font-body);
+  font-weight: 500;
+}
+
+.quote-band blockquote {
+  line-height: 1.28;
+}
+
+@media (max-width: 767.98px) {
+  .eyebrow,
+  .section-kicker,
+  .card-kicker,
+  .body-section p,
+  .body-section li,
+  .featured-card p,
   .footer-contact a,
   .footer-contact span,
   .footer-bottom a,
