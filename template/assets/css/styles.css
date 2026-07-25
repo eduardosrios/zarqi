@@ -265,7 +265,7 @@ img {
 .featured-card {
   display: grid;
   grid-template-columns: minmax(126px, .72fr) minmax(176px, 1fr) 40px;
-  gap: 18px;
+  gap: var(--gap-compact);
   align-items: center;
   min-height: 144px;
   margin: 0;
@@ -368,7 +368,7 @@ img {
 .principles-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
+  gap: var(--gap-unit);
 }
 
 .principle-card {
@@ -841,7 +841,7 @@ img {
 .project-row,
 .mosaic-grid {
   display: grid;
-  gap: 18px;
+  gap: var(--gap-unit);
 }
 
 .quad-grid {
@@ -1030,7 +1030,7 @@ img {
 .expertise-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
+  gap: var(--gap-unit);
 }
 
 .expertise-grid article {
@@ -1153,7 +1153,7 @@ img {
 .logo-row {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 18px;
+  gap: var(--gap-unit);
 }
 
 .logo-row span {
@@ -1169,7 +1169,7 @@ img {
 .wide-image-row,
 .mag-grid {
   display: grid;
-  gap: 18px;
+  gap: var(--gap-unit);
 }
 
 .before-grid {
@@ -1239,7 +1239,7 @@ img {
 .timeline-row {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 18px;
+  gap: var(--gap-unit);
 }
 
 .timeline-row {
@@ -1868,8 +1868,8 @@ img {
   .section-head,
   .rail-head,
   .section-meta {
-    gap: 18px;
-    margin-bottom: 28px;
+    gap: var(--gap-compact);
+    margin-bottom: 30px;
   }
 
   .body-section {
