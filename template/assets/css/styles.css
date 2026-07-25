@@ -4512,3 +4512,10 @@ body.has-fixed-topbar .hero-frame {
     max-height: 48px;
   }
 }
+
+/* ETAPA 06: responsive anchor and QA overlay safeguards. */
+.hero-frame,
+.body-section,
+.site-footer {
+  scroll-margin-top: 112px;
+}
