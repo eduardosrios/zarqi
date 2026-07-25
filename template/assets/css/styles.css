@@ -15,6 +15,12 @@
   --stone: #f3f0e8;
   --font-body: "Manrope", sans-serif;
   --font-accent: "Cormorant Garamond", serif;
+  --gap-unit: 30px;
+  --gap-compact: 18px;
+  --gap-tight: 12px;
+  --section-stack-gap: 30px;
+  --section-pad-y: clamp(48px, 6vw, 96px);
+  --section-pad-x: clamp(30px, 5vw, 78px);
 }
 
 * {
@@ -715,7 +721,7 @@ img {
 
 .body-stage {
   width: min(1840px, 100%);
-  margin: 30px auto 0;
+  margin: var(--section-stack-gap) auto 0;
   color: var(--ink);
 }
 
@@ -807,7 +813,7 @@ img {
 .magazine-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(280px, .72fr);
-  gap: clamp(28px, 5vw, 82px);
+  gap: clamp(30px, 5vw, 84px);
   align-items: center;
 }
 
