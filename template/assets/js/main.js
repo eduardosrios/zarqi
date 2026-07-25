@@ -251,7 +251,7 @@
   }
 
   $(function () {
-    var $links = $('.nav-link[href^="#"], .mobile-links a[href^="#"]');
+    var $links = $('.brand-lockup[href^="#"], .nav-link[href^="#"], .nav-submenu a[href^="#"], .mobile-links a[href^="#"], .hero-actions a[href^="#"], .nav-cta[href^="#"], .site-footer a[href^="#"]');
 
     $links.on('click', function () {
       var target = $(this).attr('href');
