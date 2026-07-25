@@ -2025,3 +2025,26 @@ img {
     max-width: 248px;
   }
 }
+@media (hover: none) {
+  .project-row article:hover,
+  .quad-grid article:hover,
+  .mini-card-grid article:hover,
+  .journal-row article:hover,
+  .location-grid article:hover,
+  .visual-grid article:hover,
+  .icon-btn:hover,
+  .icon-btn:focus {
+    transform: none;
+  }
+}
+
+@media (pointer: coarse) {
+  .filter-chip,
+  .hero-btn,
+  .nav-cta,
+  .contact-form button,
+  .mobile-links a,
+  .footer-social a {
+    min-height: 44px;
+  }
+}
