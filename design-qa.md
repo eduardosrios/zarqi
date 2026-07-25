@@ -162,3 +162,37 @@ Verification:
 Residual differences accepted for ETAPA 03:
 - Exact Arcova logo and social destinations are replaced by zarqi branding and local placeholder links.
 - Background imagery is a local Unsplash-derived architecture asset, allowed by the instructions.
+# ETAPA 04 QA
+
+Status: passed for ETAPA 04.
+
+Typography standardization:
+- Kept exactly two Google Fonts for text: Manrope and Cormorant Garamond.
+- Removed Arial and Georgia from project CSS font stacks, keeping generic `sans-serif` and `serif` fallbacks only.
+- Applied Manrope as the primary interface/body/hero font to preserve the geometric hero reference.
+- Applied Cormorant Garamond selectively to editorial CTA/quote display moments so the second font is present without drifting away from the hero style.
+- Font Awesome remains unchanged for icons.
+
+Color standardization:
+- Limited palette beyond black/white to three named tokens: brass `#b99f69`, umber `#4e3c28`, and stone `#f3f0e8`.
+- Replaced divergent warm/green/gray swatches with palette colors.
+- Normalized accent references across body sections and footer.
+- Preserved black/white/alpha neutrals because they are part of the original dark hero language.
+
+Typography review passes:
+1. Verified both Google Fonts are loaded from `index.html`.
+2. Verified no Arial/Georgia references remain in project CSS.
+3. Checked desktop/mobile screenshots for hero, body start, and active cards after font changes.
+
+Color review passes:
+1. Scanned CSS/HTML for off-palette color drift from old swatches and accent variants.
+2. Fixed self-referential CSS custom properties introduced during replacement.
+3. Captured desktop/mobile QA after palette normalization and confirmed no visible regressions.
+
+Verification:
+- Local page load: `200 /templates/Architecture/template/`.
+- Body section count: 36.
+- Footer present: true.
+- Manrope present: true.
+- Cormorant Garamond present: true.
+- ETAPA 04 screenshots: `tmp/etapa04-desktop.png`, `tmp/etapa04-mobile.png`, `tmp/etapa04-qa.png`.
