@@ -3169,3 +3169,76 @@ body :not(i):not(.fa):not(.fas):not(.far):not(.fab):not(.fa-solid):not(.fa-regul
     transform: none;
   }
 }
+
+/* ETAPA 04C: final footer contact spacing and alignment correction. */
+.footer-contact {
+  gap: 22px;
+  max-width: 390px;
+  justify-self: start;
+}
+
+.footer-contact > a,
+.footer-contact > span {
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr);
+  column-gap: 14px;
+  align-items: start;
+  justify-content: start;
+  min-height: 0;
+  color: rgba(255, 255, 255, .72);
+  line-height: 1.58;
+  text-align: left;
+}
+
+.footer-contact > a i,
+.footer-contact > span i {
+  width: 30px;
+  margin-right: 0;
+  line-height: 1.58;
+  text-align: center;
+  transform: translateY(1px);
+}
+
+.footer-social {
+  gap: 12px;
+  margin-top: 6px;
+  padding-top: 8px;
+  align-items: center;
+}
+
+.footer-social a {
+  flex: 0 0 48px;
+}
+
+@media (max-width: 991.98px) {
+  .footer-contact {
+    max-width: 460px;
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .footer-contact {
+    gap: 20px;
+    max-width: 310px;
+  }
+
+  .footer-contact > a,
+  .footer-contact > span {
+    grid-template-columns: 28px minmax(0, 1fr);
+    column-gap: 12px;
+    line-height: 1.62;
+  }
+
+  .footer-contact > a i,
+  .footer-contact > span i {
+    width: 28px;
+    line-height: 1.62;
+  }
+
+  .footer-social {
+    gap: 10px;
+    margin-top: 8px;
+    padding-top: 8px;
+  }
+}
