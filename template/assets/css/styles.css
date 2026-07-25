@@ -93,7 +93,7 @@ img {
   gap: 9px;
   min-width: 128px;
   color: var(--ink);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   letter-spacing: 0;
 }
@@ -104,7 +104,7 @@ img {
   height: 18px;
   place-items: center;
   color: rgba(255, 255, 255, .9);
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .nav-pill {
@@ -190,7 +190,7 @@ img {
 .eyebrow {
   margin: 0 0 12px;
   color: rgba(255, 255, 255, .68);
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -221,7 +221,7 @@ img {
   max-width: 260px;
   margin: 0;
   color: rgba(255, 255, 255, .72);
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.35;
 }
 
@@ -265,7 +265,7 @@ img {
   display: block;
   margin-top: 28px;
   color: rgba(255, 255, 255, .64);
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .featured-card {
@@ -305,13 +305,13 @@ img {
   min-width: 0;
   margin: 0;
   color: rgba(255, 255, 255, .62);
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.35;
 }
 
 .card-kicker {
   color: rgba(255, 255, 255, .42) !important;
-  font-size: 10px !important;
+  font-size: 16px !important;
   font-weight: 800;
   text-transform: uppercase;
 }
@@ -324,7 +324,7 @@ img {
   border-radius: var(--radius-sm);
   background: #fff;
   color: #000;
-  font-size: 14px;
+  font-size: 16px;
   transition: transform .18s ease, opacity .18s ease;
 }
 
@@ -367,7 +367,7 @@ img {
 .studio-note p {
   margin: 0 0 18px;
   color: rgba(255, 255, 255, .72);
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.45;
 }
 
@@ -413,7 +413,7 @@ img {
   max-width: 330px;
   margin: 0;
   color: rgba(255, 255, 255, .58);
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.45;
 }
 
@@ -472,7 +472,7 @@ img {
   max-width: 440px;
   margin: 0;
   color: rgba(255, 255, 255, .78);
-  font-size: clamp(15px, 1.5vw, 22px);
+  font-size: clamp(16px, 1.5vw, 22px);
   line-height: 1.15;
 }
 
@@ -484,7 +484,7 @@ img {
   display: grid;
   gap: 38px;
   color: rgba(255, 255, 255, .46);
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .showcase-scroll {
@@ -675,7 +675,7 @@ img {
 
   .stat-item span {
     margin-top: 12px;
-    font-size: 10px;
+    font-size: 16px;
   }
 
   .featured-card {
@@ -692,7 +692,7 @@ img {
   }
 
   .featured-card h2 {
-    font-size: 19px;
+    font-size: 20px;
   }
 
   .featured-card p:not(.card-kicker) {
@@ -766,7 +766,7 @@ img {
 .section-kicker {
   margin: 0 0 12px;
   color: var(--accent);
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 800;
   text-transform: uppercase;
 }
@@ -910,7 +910,7 @@ img {
 .project-row span,
 .team-grid span {
   color: rgba(255, 255, 255, .46);
-  font-size: 12px;
+  font-size: 16px;
   text-transform: uppercase;
 }
 
@@ -1297,7 +1297,7 @@ img {
   display: grid;
   gap: 8px;
   color: rgba(255, 255, 255, .62);
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 800;
   text-transform: uppercase;
 }
@@ -1530,7 +1530,7 @@ img {
 .footer-bottom a,
 .footer-bottom span {
   color: rgba(255, 255, 255, .68);
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .footer-contact i {
@@ -1666,7 +1666,7 @@ img {
   display: none;
   margin: -6px 0 18px;
   color: rgba(255, 255, 255, .62);
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.45;
 }
 
@@ -1774,7 +1774,7 @@ img {
   }
 
   .featured-card h2 {
-    font-size: 21px;
+    font-size: 20px;
   }
 }
 
@@ -1842,7 +1842,7 @@ img {
 
   .hero-actions p {
     max-width: 286px;
-    font-size: 12px;
+    font-size: 16px;
   }
 
   .hero-stat-panel {
@@ -1958,7 +1958,7 @@ img {
 
   .eyebrow {
     max-width: 220px;
-    font-size: 10px;
+    font-size: 16px;
   }
 
   .hero-copy h1 {
@@ -1992,11 +1992,11 @@ img {
   }
 
   .featured-card h2 {
-    font-size: 17px;
+    font-size: 20px;
   }
 
   .featured-card p {
-    font-size: 10px;
+    font-size: 16px;
   }
 
   .hero-studio-row h2 {
