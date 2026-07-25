@@ -4544,3 +4544,107 @@ body.has-fixed-topbar .hero-frame {
     scroll-margin-top: 96px;
   }
 }
+
+/* ETAPA 04N: premium form field affordances for native controls. */
+.contact-form label:has(select),
+.contact-form label:has(input[type="date"]) {
+  position: relative;
+}
+
+.contact-form select,
+.contact-form input[type="date"] {
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 58px;
+  color-scheme: dark;
+  transition: background-color .22s ease, border-color .22s ease, box-shadow .22s ease, color .22s ease;
+}
+
+.contact-form select::-ms-expand {
+  display: none;
+}
+
+.contact-form label:has(select)::after,
+.contact-form label:has(input[type="date"])::after {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  display: inline-grid;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  border-left: 1px solid rgba(255, 255, 255, .16);
+  color: rgba(var(--accent-rgb), .94);
+  font-family: "Font Awesome 7 Free";
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1;
+  pointer-events: none;
+  transition: color .22s ease, border-color .22s ease, opacity .22s ease;
+}
+
+.contact-form label:has(select)::after {
+  content: "\f078";
+}
+
+.contact-form label:has(input[type="date"])::after {
+  content: "\f073";
+}
+
+.contact-form label:has(select:hover)::after,
+.contact-form label:has(select:focus)::after,
+.contact-form label:has(select:focus-visible)::after,
+.contact-form label:has(input[type="date"]:hover)::after,
+.contact-form label:has(input[type="date"]:focus)::after,
+.contact-form label:has(input[type="date"]:focus-visible)::after {
+  border-color: rgba(var(--accent-rgb), .48);
+  color: #fff;
+}
+
+.contact-form input[type="date"]::-webkit-calendar-picker-indicator {
+  width: 42px;
+  height: 42px;
+  margin-right: -48px;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.contact-form input[type="date"]::-webkit-datetime-edit,
+.contact-form input[type="date"]::-webkit-datetime-edit-fields-wrapper,
+.contact-form input[type="date"]::-webkit-datetime-edit-text,
+.contact-form input[type="date"]::-webkit-datetime-edit-month-field,
+.contact-form input[type="date"]::-webkit-datetime-edit-day-field,
+.contact-form input[type="date"]::-webkit-datetime-edit-year-field {
+  color: #fff;
+}
+
+@media (max-width: 575.98px) {
+  .contact-form select,
+  .contact-form input[type="date"] {
+    padding-right: 54px;
+  }
+
+  .contact-form label:has(select)::after,
+  .contact-form label:has(input[type="date"])::after {
+    right: 12px;
+    bottom: 14px;
+    width: 26px;
+    height: 26px;
+  }
+}
+
+/* ETAPA 04N final review: keep QA reference controls away from form fields and fully suppress native date art. */
+.inquiry-panel > .reference-link.reference-link-cropped,
+.inquiry-panel > .reference-link.reference-link-original {
+  display: none !important;
+}
+
+.contact-form input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent !important;
+  color: transparent !important;
+  opacity: 0 !important;
+}
