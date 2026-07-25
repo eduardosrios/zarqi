@@ -51,9 +51,23 @@
             <ul class="navbar-nav nav-pill">
               <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
               <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-              <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+              <li class="nav-item nav-dropdown">
+                <a class="nav-link nav-link-dropdown" href="#projects" aria-haspopup="true" aria-expanded="false">Projects <i class="fa-solid fa-chevron-down nav-chevron nav-chevron-down" aria-hidden="true"></i><i class="fa-solid fa-chevron-up nav-chevron nav-chevron-up" aria-hidden="true"></i></a>
+                <div class="nav-submenu" role="menu" aria-label="Projects submenu">
+                  <a href="#projects" role="menuitem"><span>Featured projects</span><small>Signature residential work</small></a>
+                  <a href="#projects-body" role="menuitem"><span>Project gallery</span><small>Interior and exterior studies</small></a>
+                  <a href="#studio-overview" role="menuitem"><span>Studio overview</span><small>Design direction and metrics</small></a>
+                </div>
+              </li>
               <li class="nav-item"><a class="nav-link" href="#why-us">Why us</a></li>
-              <li class="nav-item"><a class="nav-link" href="#work-stages">Work stages</a></li>
+              <li class="nav-item nav-dropdown">
+                <a class="nav-link nav-link-dropdown" href="#work-stages" aria-haspopup="true" aria-expanded="false">Work stages <i class="fa-solid fa-chevron-down nav-chevron nav-chevron-down" aria-hidden="true"></i><i class="fa-solid fa-chevron-up nav-chevron nav-chevron-up" aria-hidden="true"></i></a>
+                <div class="nav-submenu" role="menu" aria-label="Work stages submenu">
+                  <a href="#services" role="menuitem"><span>Services</span><small>Architecture and interiors</small></a>
+                  <a href="#work-stages" role="menuitem"><span>Process stages</span><small>From briefing to build</small></a>
+                  <a href="#contact" role="menuitem"><span>Project inquiry</span><small>Start a scoped conversation</small></a>
+                </div>
+              </li>
               <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
             </ul>
           </div>
@@ -70,9 +84,29 @@
           <nav class="mobile-links" aria-label="Mobile navigation">
             <a href="#home" data-bs-dismiss="offcanvas">Home</a>
             <a href="#about" data-bs-dismiss="offcanvas">About</a>
-            <a href="#projects" data-bs-dismiss="offcanvas">Projects</a>
+            <div class="mobile-menu-group">
+              <div class="mobile-menu-row">
+                <a href="#projects" data-bs-dismiss="offcanvas">Projects</a>
+                <button class="mobile-submenu-toggle" type="button" aria-expanded="false" aria-controls="mobileProjectsSubmenu" aria-label="Toggle projects submenu"><i class="fa-solid fa-chevron-down mobile-chevron-down" aria-hidden="true"></i><i class="fa-solid fa-chevron-up mobile-chevron-up" aria-hidden="true"></i></button>
+              </div>
+              <div class="mobile-submenu" id="mobileProjectsSubmenu">
+                <a href="#projects" data-bs-dismiss="offcanvas">Featured projects</a>
+                <a href="#projects-body" data-bs-dismiss="offcanvas">Project gallery</a>
+                <a href="#studio-overview" data-bs-dismiss="offcanvas">Studio overview</a>
+              </div>
+            </div>
             <a href="#why-us" data-bs-dismiss="offcanvas">Why us</a>
-            <a href="#work-stages" data-bs-dismiss="offcanvas">Work stages</a>
+            <div class="mobile-menu-group">
+              <div class="mobile-menu-row">
+                <a href="#work-stages" data-bs-dismiss="offcanvas">Work stages</a>
+                <button class="mobile-submenu-toggle" type="button" aria-expanded="false" aria-controls="mobileStagesSubmenu" aria-label="Toggle work stages submenu"><i class="fa-solid fa-chevron-down mobile-chevron-down" aria-hidden="true"></i><i class="fa-solid fa-chevron-up mobile-chevron-up" aria-hidden="true"></i></button>
+              </div>
+              <div class="mobile-submenu" id="mobileStagesSubmenu">
+                <a href="#services" data-bs-dismiss="offcanvas">Services</a>
+                <a href="#work-stages" data-bs-dismiss="offcanvas">Process stages</a>
+                <a href="#contact" data-bs-dismiss="offcanvas">Project inquiry</a>
+              </div>
+            </div>
             <a href="#faq" data-bs-dismiss="offcanvas">FAQ</a>
             <a class="btn btn-light w-100 mt-3" href="#contact" data-bs-dismiss="offcanvas">Get in touch</a>
           </nav>

@@ -2895,3 +2895,277 @@ body :not(i):not(.fa):not(.fas):not(.far):not(.fab):not(.fa-solid):not(.fa-regul
     line-height: 1.66;
   }
 }
+
+/* ETAPA 04I/04J: premium dropdown navigation and scroll-fixed topbar. */
+.hero-navbar {
+  transition: opacity .24s ease, transform .28s ease, background-color .24s ease, box-shadow .24s ease, border-color .24s ease, padding .24s ease;
+}
+
+.hero-navbar.is-fixed,
+.hero-navbar.is-fixed-hidden {
+  position: fixed;
+  top: 14px;
+  right: max(16px, calc((100vw - 1772px) / 2));
+  left: max(16px, calc((100vw - 1772px) / 2));
+  z-index: 999990;
+  width: auto;
+  height: auto;
+  padding: 10px 12px;
+  border: 1px solid rgba(255, 255, 255, .16);
+  border-radius: 8px;
+  background: rgba(7, 7, 7, .88);
+  box-shadow: 0 18px 54px rgba(0, 0, 0, .36);
+  backdrop-filter: blur(20px);
+}
+
+.hero-navbar.is-fixed {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.hero-navbar.is-fixed-hidden {
+  opacity: 0;
+  transform: translateY(-145%);
+  pointer-events: none;
+}
+
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-link-dropdown {
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.nav-chevron,
+.mobile-submenu-toggle i {
+  flex: 0 0 auto;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.nav-chevron-up,
+.nav-dropdown.is-open .nav-chevron-down,
+.nav-dropdown:hover .nav-chevron-down,
+.nav-dropdown:focus-within .nav-chevron-down,
+.mobile-chevron-up,
+.mobile-menu-group.is-open .mobile-chevron-down {
+  display: none;
+}
+
+.nav-dropdown.is-open .nav-chevron-up,
+.nav-dropdown:hover .nav-chevron-up,
+.nav-dropdown:focus-within .nav-chevron-up,
+.mobile-menu-group.is-open .mobile-chevron-up {
+  display: inline-block;
+}
+
+.nav-submenu {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 50%;
+  z-index: 30;
+  display: grid;
+  width: 286px;
+  gap: 6px;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, .18);
+  border-radius: 8px;
+  background: rgba(9, 9, 9, .94);
+  box-shadow: 0 22px 60px rgba(0, 0, 0, .38);
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -8px);
+  transition: opacity .2s ease, transform .2s ease;
+  backdrop-filter: blur(18px);
+}
+
+.nav-submenu::before {
+  position: absolute;
+  top: -7px;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  border-top: 1px solid rgba(255, 255, 255, .18);
+  border-left: 1px solid rgba(255, 255, 255, .18);
+  background: rgba(9, 9, 9, .94);
+  content: "";
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.nav-dropdown:hover .nav-submenu,
+.nav-dropdown:focus-within .nav-submenu,
+.nav-dropdown.is-open .nav-submenu {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, 0);
+}
+
+.nav-submenu a {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 4px;
+  min-height: 62px;
+  padding: 12px 14px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  color: rgba(255, 255, 255, .9);
+  font-size: 16px;
+  line-height: 1.28;
+  transition: background-color .2s ease, border-color .2s ease, transform .2s ease;
+}
+
+.nav-submenu a:hover,
+.nav-submenu a:focus {
+  border-color: rgba(var(--accent-rgb), .42);
+  background: rgba(var(--accent-rgb), .14);
+  color: #fff;
+  transform: translateX(2px);
+}
+
+.nav-submenu span,
+.nav-submenu small,
+.mobile-submenu a {
+  font-size: 16px;
+  letter-spacing: 0;
+}
+
+.nav-submenu span {
+  font-weight: 800;
+}
+
+.nav-submenu small {
+  color: rgba(255, 255, 255, .62);
+  line-height: 1.42;
+}
+
+.mobile-menu-group {
+  display: grid;
+  border-bottom: 1px solid rgba(255, 255, 255, .14);
+}
+
+.mobile-menu-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 48px;
+  align-items: stretch;
+  gap: 8px;
+}
+
+.mobile-links .mobile-menu-row a:not(.btn) {
+  border-bottom: 0;
+}
+
+.mobile-submenu-toggle {
+  display: inline-flex;
+  width: 48px;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  border: 1px solid rgba(255, 255, 255, .18);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, .08);
+  color: #fff;
+  transition: background-color .2s ease, border-color .2s ease, color .2s ease;
+}
+
+.mobile-submenu-toggle:hover,
+.mobile-submenu-toggle:focus,
+.mobile-menu-group.is-open .mobile-submenu-toggle {
+  border-color: rgba(var(--accent-rgb), .5);
+  background: rgba(var(--accent-rgb), .16);
+  color: #fff;
+}
+
+.mobile-submenu {
+  display: none;
+  padding: 0 0 10px 14px;
+}
+
+.mobile-menu-group.is-open .mobile-submenu {
+  display: grid;
+  gap: 6px;
+}
+
+.mobile-links .mobile-submenu a:not(.btn) {
+  min-height: 48px;
+  padding: 10px 12px;
+  border-bottom: 0;
+  border-left: 1px solid rgba(var(--accent-rgb), .34);
+  color: rgba(255, 255, 255, .72);
+  line-height: 1.42;
+}
+
+.mobile-links .mobile-submenu a:not(.btn):hover,
+.mobile-links .mobile-submenu a:not(.btn):focus {
+  color: #fff;
+}
+
+@media (max-width: 1199.98px) and (min-width: 992px) {
+  .nav-pill .nav-link {
+    min-width: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .nav-link-dropdown {
+    gap: 6px;
+  }
+
+  .nav-submenu {
+    width: 264px;
+  }
+
+  .nav-dropdown:nth-child(3) .nav-submenu {
+    left: 0;
+    transform: translate(0, -8px);
+  }
+
+  .nav-dropdown:nth-child(3):hover .nav-submenu,
+  .nav-dropdown:nth-child(3):focus-within .nav-submenu,
+  .nav-dropdown:nth-child(3).is-open .nav-submenu {
+    transform: translate(0, 0);
+  }
+
+  .nav-dropdown:nth-child(3) .nav-submenu::before {
+    left: 50px;
+  }
+
+  .nav-dropdown:nth-child(5) .nav-submenu {
+    right: 0;
+    left: auto;
+    transform: translate(0, -8px);
+  }
+
+  .nav-dropdown:nth-child(5):hover .nav-submenu,
+  .nav-dropdown:nth-child(5):focus-within .nav-submenu,
+  .nav-dropdown:nth-child(5).is-open .nav-submenu {
+    transform: translate(0, 0);
+  }
+
+  .nav-dropdown:nth-child(5) .nav-submenu::before {
+    right: 54px;
+    left: auto;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .hero-navbar.is-fixed,
+  .hero-navbar.is-fixed-hidden {
+    top: 10px;
+    right: 10px;
+    left: 10px;
+    width: auto;
+    padding: 8px 10px;
+  }
+}
+
+@media (hover: none) {
+  .nav-submenu a:hover,
+  .nav-submenu a:focus {
+    transform: none;
+  }
+}
