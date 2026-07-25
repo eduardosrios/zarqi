@@ -1451,3 +1451,146 @@ img {
   border-radius: 999px;
   background: rgba(255, 255, 255, .28);
 }
+.site-footer {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(280px, .9fr) minmax(260px, .7fr) minmax(280px, .8fr);
+  gap: clamp(28px, 5vw, 78px);
+  width: min(1840px, 100%);
+  margin: 18px auto 0;
+  padding: clamp(42px, 6vw, 82px) clamp(24px, 5vw, 78px) 22px;
+  border: 1px solid rgba(255, 255, 255, .18);
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(90deg, rgba(5, 5, 5, .95), rgba(5, 5, 5, .88)),
+    url("../img/concrete-facade.jpg") center/cover;
+  color: #fff;
+}
+
+.site-footer::after {
+  position: absolute;
+  right: clamp(24px, 5vw, 78px);
+  bottom: 70px;
+  width: min(360px, 24vw);
+  height: min(260px, 20vw);
+  border: 1px solid rgba(185, 159, 105, .18);
+  content: "";
+  pointer-events: none;
+}
+
+.footer-cta,
+.footer-contact,
+.footer-brand-block {
+  min-width: 0;
+  padding-right: clamp(0px, 4vw, 54px);
+  border-right: 1px solid rgba(255, 255, 255, .16);
+}
+
+.footer-brand-block {
+  border-right: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-cta h2 {
+  max-width: 330px;
+  margin: 0 0 28px;
+  font-size: clamp(38px, 4.5vw, 72px);
+  font-weight: 400;
+  line-height: .98;
+}
+
+.footer-contact {
+  display: grid;
+  align-content: start;
+  gap: 16px;
+}
+
+.footer-contact a,
+.footer-contact span,
+.footer-bottom a,
+.footer-bottom span {
+  color: rgba(255, 255, 255, .68);
+  font-size: 13px;
+}
+
+.footer-contact i {
+  width: 18px;
+  margin-right: 10px;
+  color: #b99f69;
+}
+
+.footer-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.footer-social a {
+  display: inline-grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, .18);
+  border-radius: 999px;
+}
+
+.footer-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+  color: #fff;
+  font-size: clamp(30px, 3vw, 48px);
+  font-weight: 700;
+}
+
+.footer-brand i {
+  color: #b99f69;
+}
+
+.footer-brand-block p {
+  max-width: 380px;
+  color: rgba(255, 255, 255, .62);
+}
+
+.footer-bottom {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  gap: 22px;
+  margin-top: 36px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, .14);
+}
+
+.footer-bottom nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+
+.site-footer a:hover,
+.site-footer a:focus {
+  color: #fff;
+}
+
+@media (max-width: 991.98px) {
+  .site-footer {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-cta,
+  .footer-contact,
+  .footer-brand-block {
+    padding-right: 0;
+    padding-bottom: 28px;
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .16);
+  }
+
+  .footer-bottom {
+    display: grid;
+  }
+}
