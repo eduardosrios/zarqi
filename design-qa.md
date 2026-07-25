@@ -299,3 +299,41 @@ Verification:
 - Desktop computed values included `gapUnit: 30px`, `projectRowGap: 30px`, `principlesGap: 30px`, `expertiseGap: 30px`.
 - Phone computed values preserved compact local spacing where needed while keeping repeated layout grids at `30px`.
 - All final general checks reported `scrollWidth == clientWidth` and `offenders: 0`.
+# ETAPA 04B/04D QA
+
+Status: passed for updated ETAPA 04B color and ETAPA 04D button refinements.
+
+Color adjustments completed:
+- Kept the site palette limited to black/white plus three project colors: brass `#b99f69`, umber `#4e3c28`, and stone `#f3f0e8`.
+- Added RGB palette tokens for brass, umber, and stone so translucent effects derive from the same approved colors.
+- Replaced remaining warm RGBA literals in the shell glow, hero stat panel, featured card, map accent, focus outline, footer accent frame, SimpleBar thumb, and hover borders with palette-token equivalents.
+
+Button adjustments completed:
+- Added shared button sizing tokens for a 44px minimum height and balanced horizontal/vertical padding.
+- Normalized primary CTAs, nav CTAs, hero CTAs, contact form submit, filter chips, icon buttons, footer social buttons, FAQ buttons, and mobile navigation links.
+- Increased tight button text and nav-pill link sizing where needed, added more consistent side padding, and gave primary/secondary controls a shared hover/focus polish.
+- Removed stale tight button declarations from earlier CSS blocks so the source stylesheet no longer relies on later overrides to fix button spacing.
+
+Color review loop:
+1. Passed: no off-palette hex colors and no old warm RGBA literals remain.
+2. Passed: no off-palette hex colors and no old warm RGBA literals remain.
+3. Passed: no off-palette hex colors and no old warm RGBA literals remain.
+
+Button review loop:
+1. Passed: all required normalized button rules present; no stale 36px primary/filter button rules remain.
+2. Passed: all required normalized button rules present; no stale 36px primary/filter button rules remain.
+3. Passed: all required normalized button rules present; no stale 36px primary/filter button rules remain.
+
+General final review loop:
+1. Passed: 36 body sections, footer present, Bootstrap/jQuery/SimpleBar references present, desktop and phone render screenshots generated.
+2. Passed: 36 body sections, footer present, Bootstrap/jQuery/SimpleBar references present, desktop and phone render screenshots generated.
+3. Passed: 36 body sections, footer present, Bootstrap/jQuery/SimpleBar references present, desktop and phone render screenshots generated.
+
+Verification:
+- Loop audit JSON: `tmp/etapa04b-04d-review-loops.json`.
+- Desktop screenshot smoke check: `tmp/etapa04b04d-desktop.png`, 1440 x 1100, nonblank sample colors: 7.
+- Phone screenshot smoke check: `tmp/etapa04b04d-phone.png`, 390 x 844, nonblank sample colors: 8.
+- `git diff --check` completed with only the existing CRLF warning for `template/assets/css/styles.css`.
+
+Residual notes:
+- The local image viewer was blocked by the Windows sandbox wrapper, so screenshot validation used headless Chrome output plus image dimension/pixel sampling.
