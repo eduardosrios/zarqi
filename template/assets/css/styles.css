@@ -1340,12 +1340,12 @@ img {
 
 @media (max-width: 767.98px) {
   .body-stage {
-    margin-top: 16px;
+    margin-top: var(--gap-compact);
   }
 
   .body-section {
-    margin-bottom: 12px;
-    padding: 34px 20px;
+    margin-bottom: var(--gap-tight);
+    padding: 36px 20px;
   }
 
   .section-split,
@@ -1467,9 +1467,9 @@ img {
   position: relative;
   display: grid;
   grid-template-columns: minmax(280px, .9fr) minmax(260px, .7fr) minmax(280px, .8fr);
-  gap: clamp(28px, 5vw, 78px);
+  gap: clamp(30px, 5vw, 78px);
   width: min(1840px, 100%);
-  margin: 18px auto 0;
+  margin: var(--gap-compact) auto 0;
   padding: clamp(42px, 6vw, 82px) clamp(24px, 5vw, 78px) 22px;
   border: 1px solid rgba(255, 255, 255, .18);
   border-radius: var(--radius-lg);
@@ -1572,7 +1572,7 @@ img {
   grid-column: 1 / -1;
   display: flex;
   justify-content: space-between;
-  gap: 22px;
+  gap: var(--gap-compact);
   margin-top: 36px;
   padding-top: 18px;
   border-top: 1px solid rgba(255, 255, 255, .14);
@@ -1581,7 +1581,7 @@ img {
 .footer-bottom nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 22px;
+  gap: var(--gap-compact);
 }
 
 .site-footer a:hover,
@@ -1764,7 +1764,7 @@ img {
 
   .featured-card {
     grid-template-columns: 118px minmax(0, 1fr) 36px;
-    gap: 14px;
+    gap: var(--gap-compact);
   }
 
   .featured-card h2 {
@@ -1920,7 +1920,7 @@ img {
   }
 
   .footer-bottom nav {
-    gap: 14px;
+    gap: var(--gap-compact);
   }
 }
 
