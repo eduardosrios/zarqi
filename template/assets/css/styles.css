@@ -1601,3 +1601,108 @@ img {
     display: grid;
   }
 }
+.project-row img,
+.mosaic-grid img,
+.journal-row img,
+.before-grid img,
+.paired-images img,
+.wide-image-row img,
+.mag-grid img,
+.featured-card img,
+.project-showcase img {
+  cursor: zoom-in;
+}
+
+.project-lightbox .modal-content {
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, .2);
+  border-radius: var(--radius-lg);
+  background: #050505;
+  color: #fff;
+}
+
+.project-lightbox .btn-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  z-index: 3;
+  padding: 12px;
+  border-radius: 999px;
+  background-color: rgba(0, 0, 0, .52);
+}
+
+.project-lightbox img {
+  width: 100%;
+  max-height: 72vh;
+  object-fit: cover;
+  filter: saturate(.94) contrast(1.03);
+}
+
+.lightbox-caption {
+  display: grid;
+  gap: 4px;
+  padding: 22px 26px 26px;
+}
+
+.lightbox-caption h2 {
+  margin: 0;
+  font-size: clamp(28px, 4vw, 56px);
+  font-weight: 400;
+}
+
+.faq-answer {
+  display: none;
+  margin: -6px 0 18px;
+  color: rgba(255, 255, 255, .62);
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.faq-list button.active + .faq-answer {
+  display: block;
+}
+
+.simplebar-track.simplebar-horizontal {
+  height: 10px;
+}
+
+.simplebar-scrollbar::before {
+  background: rgba(185, 159, 105, .78);
+}
+
+.is-animated-in {
+  will-change: transform, opacity;
+}
+
+.project-row article,
+.quad-grid article,
+.mini-card-grid article,
+.journal-row article,
+.location-grid article,
+.visual-grid article,
+.footer-social a,
+.icon-btn,
+.filter-chip {
+  transition: transform .24s ease, border-color .24s ease, background-color .24s ease, color .24s ease, opacity .24s ease;
+}
+
+.project-row article:hover,
+.quad-grid article:hover,
+.mini-card-grid article:hover,
+.journal-row article:hover,
+.location-grid article:hover,
+.visual-grid article:hover {
+  border-color: rgba(185, 159, 105, .62);
+  transform: translateY(-4px);
+}
+
+.stat-ribbon strong[data-count],
+.awards-band strong[data-count],
+.stat-item strong[data-count] {
+  font-variant-numeric: tabular-nums;
+}
+
+.contact-form button.disabled {
+  pointer-events: none;
+  opacity: .72;
+}
