@@ -6,6 +6,18 @@ This file documents the ETAPA 04F video experiment retained after the ETAPA 04E 
 
 The ETAPA 04E AI-generated image replacement was rolled back. The template is using the original local image assets again.
 
+## Icon Sources
+
+The card heading icons added for ETAPA 04E are local PNG assets sourced from Flaticon and stored in `assets/img/icons/`.
+
+- Architecture: https://www.flaticon.com/free-icon/architecture_5705715
+- Interior Design: https://www.flaticon.com/free-icon/interior-design_2642290
+- Exterior Design: https://www.flaticon.com/free-icon/landscape_14106346
+- Urban Design: https://www.flaticon.com/free-icon/urban-planning_15189626
+- Lighting: https://www.flaticon.com/free-icon/floor-lamp_8172952
+- Furniture: https://www.flaticon.com/free-icon/chair_5632330
+- Material Curation: https://www.flaticon.com/free-icon/layer_295940
+- Room Plans: https://www.flaticon.com/free-icon/ruler-triangle_7931274
 ## Pexels Video Assets
 
 Videos are referenced as remote Pexels-hosted MP4 files to avoid committing large binaries.

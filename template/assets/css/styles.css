@@ -884,6 +884,44 @@ img {
   font-size: 30px;
 }
 
+.quad-grid article,
+.mini-card-grid article {
+  overflow: visible;
+}
+
+.card-heading-icon-wrap {
+  display: inline-grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 34px;
+  overflow: visible;
+  flex: 0 0 auto;
+  align-self: start;
+}
+
+.card-heading-icon {
+  display: block;
+  width: 46px;
+  height: 46px;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  margin: 0;
+  opacity: .92;
+  filter: invert(72%) sepia(16%) saturate(477%) hue-rotate(9deg) brightness(91%) contrast(86%);
+}
+
+.mini-card-grid .card-heading-icon-wrap {
+  width: 52px;
+  height: 52px;
+}
+
+.mini-card-grid .card-heading-icon {
+  width: 42px;
+  height: 42px;
+}
+
 .image-editorial img,
 .philosophy-panel img,
 .sustainability-split img,
@@ -2471,6 +2509,16 @@ img {
 .quad-grid i,
 .mini-card-grid i {
   margin-bottom: 8px;
+}
+
+.quad-grid .card-heading-icon-wrap,
+.mini-card-grid .card-heading-icon-wrap {
+  margin-bottom: 8px;
+}
+
+.quad-grid .card-heading-icon,
+.mini-card-grid .card-heading-icon {
+  margin-bottom: 0;
 }
 
 .quad-grid h3,
