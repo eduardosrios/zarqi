@@ -1,0 +1,374 @@
+:root {
+    --hero-ink: #ffffff;
+    --hero-accent: #bea56d;
+    --hero-overlay: rgba(11, 15, 13, 0.24);
+    --hero-side: clamp(1.5rem, 6vw, 4.5rem);
+    --hero-top: clamp(0.7rem, 2vh, 1rem);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    background: #f7f7f4;
+    color: #171a18;
+    font-family: "DM Sans", Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.hero {
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    min-height: 580px;
+    height: 100svh;
+    overflow: hidden;
+    color: var(--hero-ink);
+    background-color: #726f64;
+    background-image: url("../images/hero-aetheria-coastal-house.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero::before {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    content: "";
+    background: var(--hero-overlay);
+}
+
+.hero__nav {
+    position: relative;
+    z-index: 4;
+    padding: var(--hero-top) clamp(1.5rem, 4.7vw, 3.5rem) var(--hero-top) var(--hero-side);
+}
+
+.hero__brand {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 0.94rem;
+    font-family: "Manrope", Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    line-height: 1;
+}
+
+.hero__brand:focus-visible,
+.hero__brand:hover {
+    color: #fff;
+}
+
+.hero__navigation {
+    justify-content: flex-end;
+}
+
+.hero__links {
+    align-items: center;
+    gap: 1rem;
+    margin-right: 1.5rem;
+}
+
+.hero__links .nav-link {
+    position: relative;
+    padding: 0.55rem 0;
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 0.82rem;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.hero__links .nav-link::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    content: "";
+    background: #fff;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 180ms ease;
+}
+
+.hero__links .nav-link:focus-visible::after,
+.hero__links .nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.hero__project-link,
+.hero__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.72);
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease;
+}
+
+.hero__project-link {
+    min-width: 10rem;
+    min-height: 2.85rem;
+    gap: 1.15rem;
+    border-radius: 999px;
+    font-size: 0.81rem;
+}
+
+.hero__project-link i,
+.hero__cta i {
+    font-size: 0.67rem;
+    transform: rotate(45deg);
+}
+
+.hero__project-link:focus-visible,
+.hero__project-link:hover {
+    border-color: #fff;
+    background: #fff;
+    color: #161916;
+}
+
+.hero__menu-button {
+    width: 2.75rem;
+    height: 2.75rem;
+    border-color: rgba(255, 255, 255, 0.68);
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.hero__menu-button:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.22);
+}
+
+.hero__content {
+    position: absolute;
+    z-index: 2;
+    inset: 0;
+    pointer-events: none;
+}
+
+.hero__heading {
+    position: absolute;
+    top: clamp(8.2rem, 23vh, 13rem);
+    left: var(--hero-side);
+}
+
+.hero__eyebrow {
+    margin: 0 0 clamp(1.5rem, 4.2vh, 2rem);
+    color: var(--hero-accent);
+    font-size: clamp(0.68rem, 0.82vw, 0.8rem);
+    font-family: "Manrope", Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+.hero__eyebrow span {
+    margin-inline: 0.5em;
+}
+
+.hero h1 {
+    max-width: none;
+    margin: 0;
+    color: #fff;
+    font-size: clamp(3.6rem, 8.5vw, 6.4rem);
+    font-family: "Manrope", Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1.1;
+}
+
+.hero__intro {
+    position: absolute;
+    bottom: clamp(4.5rem, 13.4vh, 7rem);
+    left: var(--hero-side);
+    margin: 0;
+    color: rgba(255, 255, 255, 0.94);
+    font-size: clamp(0.94rem, 1.3vw, 1.05rem);
+    font-weight: 400;
+    line-height: 1.48;
+}
+
+.hero__actions {
+    position: absolute;
+    right: var(--hero-side);
+    bottom: clamp(4.25rem, 11.5vh, 6.8rem);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    pointer-events: auto;
+}
+
+.hero__cta {
+    min-width: 9.4rem;
+    min-height: 3rem;
+    gap: 1rem;
+    border-color: #fff;
+    border-radius: 999px;
+    background: #fff;
+    color: #151815;
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+.hero__cta:focus-visible,
+.hero__cta:hover {
+    border-color: #151815;
+    background: #151815;
+    color: #fff;
+}
+
+.hero__play {
+    display: inline-grid;
+    width: 3rem;
+    height: 3rem;
+    place-items: center;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.72);
+    border-radius: 50%;
+    background: transparent;
+    color: #fff;
+    transition: background-color 180ms ease, color 180ms ease;
+}
+
+.hero__play i {
+    margin-left: 0.12rem;
+    font-size: 0.72rem;
+}
+
+.hero__play:focus-visible,
+.hero__play:hover,
+.hero__play.is-playing {
+    background: #fff;
+    color: #151815;
+}
+
+#selected-work {
+    min-height: 1px;
+}
+
+@media (max-width: 991.98px) {
+    .hero {
+        min-height: 640px;
+    }
+
+    .hero__navigation {
+        position: absolute;
+        top: calc(100% + 0.75rem);
+        right: var(--hero-side);
+        left: var(--hero-side);
+        padding: 1.25rem;
+        background: #101411;
+    }
+
+    .hero__links {
+        align-items: stretch;
+        gap: 0.15rem;
+        margin: 0 0 1rem;
+    }
+
+    .hero__links .nav-link {
+        padding: 0.85rem 0;
+        font-size: 0.95rem;
+    }
+
+    .hero__project-link {
+        width: 100%;
+        border-radius: 4px;
+    }
+
+    .hero__heading {
+        top: clamp(8.5rem, 23vh, 11rem);
+    }
+
+    .hero__actions {
+        bottom: 3rem;
+        left: var(--hero-side);
+        justify-content: space-between;
+    }
+
+    .hero__intro {
+        right: var(--hero-side);
+        bottom: 8rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    :root {
+        --hero-side: 1.25rem;
+        --hero-top: 1.25rem;
+    }
+
+    .hero {
+        min-height: 620px;
+        background-position: 44% center;
+    }
+
+    .hero__brand {
+        font-size: 0.83rem;
+    }
+
+    .hero__heading {
+        top: 8.75rem;
+        right: var(--hero-side);
+    }
+
+    .hero__eyebrow {
+        max-width: 25rem;
+        margin-bottom: 1.15rem;
+        font-size: 0.61rem;
+        letter-spacing: 0.16em;
+    }
+
+    .hero h1 {
+        max-width: 8.5ch;
+        font-size: clamp(3.05rem, 15vw, 4.35rem);
+        line-height: 0.98;
+    }
+
+    .hero__intro {
+        bottom: 7.4rem;
+        font-size: 0.86rem;
+    }
+
+    .hero__actions {
+        bottom: 2rem;
+    }
+
+    .hero__cta {
+        min-width: 9rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
