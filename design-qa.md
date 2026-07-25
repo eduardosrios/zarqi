@@ -337,3 +337,28 @@ Verification:
 
 Residual notes:
 - The local image viewer was blocked by the Windows sandbox wrapper, so screenshot validation used headless Chrome output plus image dimension/pixel sampling.
+# ETAPA 04E/04F QA
+
+Status: ETAPA 04E AI-image replacement rolled back; ETAPA 04F duplicated video sections retained.
+
+Rollback completed:
+- Restored the original local image paths and alt text from the pre-experiment parent commit.
+- Restored the footer background image to `concrete-facade.jpg`.
+- Reset video posters to the matching original section images.
+- Removed the experimental AI image assets from the tracked project state.
+- Kept `template/MEDIA-SOURCES.md` as video-source documentation only.
+
+04F video work retained:
+- Six duplicated body sections remain directly below their originals: 03, 08, 11, 17, 20, and 33.
+- Each duplicated section keeps a different remote Pexels MP4 video with `autoplay`, `muted`, `loop`, `playsinline`, and `preload="metadata"`.
+- Video-specific CSS remains in place so duplicated video sections keep the same crop, radius, and responsive behavior as the original image sections.
+
+Verification after rollback:
+- Total body sections: 42, preserving the original 36 sections plus 6 duplicated video experiment sections.
+- Video experiment sections: 6.
+- Video tags: 6.
+- Live HTML/CSS image references no longer use `ai-*` assets.
+- Original visible image set is restored: `hero-residence.jpg`, `ridge-house.jpg`, `work-residence.jpg`, `courtyard-residence.jpg`, `minimal-interior.jpg`, `concrete-facade.jpg`, `studio-detail.jpg`, `urban-tower.jpg`, `warm-living-room.jpg`, `workspace-interior.jpg`, and `architectural-stairs.jpg`.
+
+Residual notes:
+- Videos remain remote Pexels-hosted MP4 files, so network access is required for playback.

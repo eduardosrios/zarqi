@@ -2288,3 +2288,63 @@ img {
     transform: none;
   }
 }
+/* ETAPA 04F: duplicated video sections share the same visual crop logic as image sections. */
+.body-section video,
+.section-video {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  border: 0;
+  background: #050505;
+}
+
+.video-experiment {
+  isolation: isolate;
+}
+
+.image-editorial .section-video,
+.philosophy-panel .section-video,
+.sustainability-split .section-video,
+.case-deep-dive .section-video {
+  height: clamp(360px, 42vw, 620px);
+  border-radius: var(--radius-md);
+}
+
+.full-image-statement .section-video {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  filter: brightness(.58) saturate(.9);
+}
+
+.case-strip .section-video {
+  height: 380px;
+  border-radius: var(--radius-md);
+}
+
+.exterior-showcase .section-video {
+  height: 460px;
+  border-radius: var(--radius-md);
+}
+
+@media (max-width: 767.98px) {
+  .image-editorial .section-video,
+  .philosophy-panel .section-video,
+  .sustainability-split .section-video,
+  .case-deep-dive .section-video,
+  .case-strip .section-video,
+  .exterior-showcase .section-video {
+    height: 280px;
+  }
+}
+
+@media (max-width: 359.98px) {
+  .image-editorial .section-video,
+  .philosophy-panel .section-video,
+  .sustainability-split .section-video,
+  .case-deep-dive .section-video,
+  .case-strip .section-video,
+  .exterior-showcase .section-video {
+    height: 240px;
+  }
+}
