@@ -1427,3 +1427,27 @@ img {
 .faq-list button.active {
   color: #b99f69;
 }
+.body-section,
+.hero-frame {
+  scroll-margin-top: 18px;
+}
+
+.body-section :focus-visible,
+.contact-form input:focus,
+.contact-form select:focus {
+  outline: 2px solid rgba(185, 159, 105, .86);
+  outline-offset: 3px;
+}
+
+.contact-form input::placeholder {
+  color: rgba(255, 255, 255, .38);
+}
+
+.wide-image-row::-webkit-scrollbar {
+  height: 8px;
+}
+
+.wide-image-row::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .28);
+}
