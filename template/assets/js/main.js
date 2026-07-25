@@ -18,5 +18,25 @@
       $('.principle-card').removeClass('principle-card-active');
       $(this).addClass('principle-card-active');
     });
+
+    $('.filter-chip').on('click', function () {
+      var filter = $(this).data('filter');
+      $('.filter-chip').removeClass('active');
+      $(this).addClass('active');
+
+      $('.expertise-grid article').each(function () {
+        var show = filter === 'all' || $(this).data('kind') === filter;
+        $(this).toggle(show);
+      });
+    });
+
+    $('.faq-list button').on('click', function () {
+      $(this).toggleClass('active');
+    });
+
+    $('.contact-form').on('submit', function (event) {
+      event.preventDefault();
+      $(this).find('button[type="submit"]').text('Inquiry ready').addClass('disabled');
+    });
   });
 })(window.jQuery);
