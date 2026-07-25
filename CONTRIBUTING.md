@@ -13,6 +13,14 @@ This is a proprietary project. Contributions are accepted only when explicitly r
 - Do not add local notes, prompt files, downloaded references, screenshots, archives, or unrelated Markdown files.
 - Do not add Codex as a contributor.
 
+
+## Static Template Standards
+
+- Keep the first screen as the usable template experience, not a marketing placeholder.
+- Preserve local vendor assets under `template/assets/vendor/` unless an approved update requires replacement.
+- Use local assets for committed images and icons whenever possible.
+- Verify visual changes at desktop and mobile widths before submitting.
+- Keep hover, focus, active, and visited states readable and dimensionally stable.
 ## Pull Requests
 
 Before opening a pull request, confirm that the change is authorized by the owner. A pull request should include:
@@ -25,3 +33,4 @@ Before opening a pull request, confirm that the change is authorized by the owne
 ## License Notice
 
 Submitting a contribution does not grant permission to use this project. All contributions, if accepted, become part of the proprietary project under the repository license terms.
+
