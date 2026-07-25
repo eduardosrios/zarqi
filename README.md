@@ -43,10 +43,27 @@ http://localhost/templates/Architecture/template/index.html
 ```
 
 Reference buttons inside the template use `http://localhost/templates/Architecture/...` links so cropped and original reference images can be opened directly in the browser during visual QA.
+
+## Repository Details
+
+GitHub repository: `eduardosrios/zarqi`
+
+Suggested About description:
+
+```text
+zarqi - Architecture, interior, exterior, and urban design website built with HTML, CSS, and JavaScript.
+```
+
+Suggested topics:
+
+```text
+architecture, interior-design, exterior-design, urban-design, html, css, javascript, static-website, front-page, website-template
+```
 ## License
 
 This project is proprietary and all rights are reserved.
 
 You may view the source code on GitHub, but you are not permitted to use, copy, modify, distribute, commercialize, or create derivative works from this project without prior written permission.
+
 
 
