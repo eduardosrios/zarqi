@@ -126,3 +126,39 @@ Residual differences accepted for ETAPA 02:
 - Photos were replaced by locally downloaded Unsplash images as allowed.
 - Icons use local Font Awesome Free as allowed.
 - Body sections are implemented as a cohesive zarqi page rather than isolated one-to-one screenshot slices, to keep navigation, content, and spacing consistent across a single HTML template.
+# ETAPA 03 QA
+
+Status: passed for ETAPA 03.
+
+Selected footer reference: `referencias/final-references/pinterest - top 02 - 034-9f5f24b6ac1f.jpg`.
+Reason: strongest footer among reviewed screenshots because it combines a commercial CTA, contact details, social links, brand block, legal/navigation row, dark architectural mood, thin dividers, and a conversion-oriented final impression.
+
+Footer implementation:
+- Added `footer.site-footer#site-footer` after the 36 body sections.
+- Built dark architectural CTA column: "Something extraordinary.".
+- Added contact methods, address, social icon links, zarqi brand block, and bottom nav/legal strip.
+- Used local Font Awesome icons and local `concrete-facade.jpg` background image as green-flag substitutions.
+
+10 review/correction passes:
+1. Compared footer structure against the Arcova-style reference: CTA/contact/brand/footer-bottom pattern selected.
+2. Checked hierarchy: CTA left, contact middle, brand right retained.
+3. Checked visual density: dividers and dark image overlay added to match the robust reference tone.
+4. Checked conversion: primary "Start your project" CTA added.
+5. Checked brand compliance: Arcova replaced by zarqi.
+6. Checked icons: local Font Awesome used for contact and social links.
+7. Checked desktop preview: columns align and do not overflow.
+8. Checked mobile preview: columns stack cleanly and text remains contained.
+9. Checked encoding: copyright glyph converted to `&copy;` entity for ASCII-safe source.
+10. Checked full page: footer exists and body section count remains 36.
+
+Verification:
+- Local page load: `200 /templates/Architecture/template/`.
+- Footer present: true.
+- Body sections still present: 36.
+- Desktop footer screenshot: `tmp/etapa03-footer-desktop.png`.
+- Mobile footer screenshot: `tmp/etapa03-footer-mobile.png`.
+- Footer QA sheet: `tmp/etapa03-footer-qa.png`.
+
+Residual differences accepted for ETAPA 03:
+- Exact Arcova logo and social destinations are replaced by zarqi branding and local placeholder links.
+- Background imagery is a local Unsplash-derived architecture asset, allowed by the instructions.
