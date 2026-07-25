@@ -3735,3 +3735,780 @@ body.has-fixed-topbar .reference-link.reference-link-original {
 .hero-frame > .reference-link.reference-link-original {
   top: 50% !important;
 }
+
+/* ETAPA 04L: document scrollbar guard. */
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+  overflow-y: auto;
+}
+
+body {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: clip;
+  overflow-y: visible;
+}
+
+.site-shell,
+.hero-frame,
+.body-stage,
+.body-section,
+.site-footer {
+  max-width: 100%;
+}
+
+.site-shell,
+.body-stage,
+.site-footer {
+  overflow-x: clip;
+}
+
+body.has-fixed-topbar .hero-frame {
+  overflow-x: clip;
+  overflow-y: visible;
+}
+
+.hero-navbar.is-fixed,
+.hero-navbar.is-fixed-hidden {
+  max-width: calc(100vw - 32px);
+}
+
+.wide-image-row[data-simplebar],
+.offcanvas-body[data-simplebar],
+.lightbox-scroll {
+  max-width: 100%;
+}
+
+@supports not (overflow: clip) {
+  html,
+  body,
+  .site-shell,
+  .body-stage,
+  .site-footer,
+  body.has-fixed-topbar .hero-frame {
+    overflow-x: hidden;
+  }
+}
+
+/* ETAPA 04K: logo must not visually change on hover/focus/active. */
+.brand-lockup,
+.brand-lockup:visited,
+.brand-lockup:hover,
+.brand-lockup:focus,
+.brand-lockup:focus-visible,
+.brand-lockup:active,
+.footer-brand,
+.footer-brand:visited,
+.footer-brand:hover,
+.footer-brand:focus,
+.footer-brand:focus-visible,
+.footer-brand:active {
+  background: transparent !important;
+  color: #fff !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.brand-lockup .brand-text,
+.brand-lockup:visited .brand-text,
+.brand-lockup:hover .brand-text,
+.brand-lockup:focus .brand-text,
+.brand-lockup:focus-visible .brand-text,
+.brand-lockup:active .brand-text,
+.footer-brand .brand-text,
+.footer-brand:visited .brand-text,
+.footer-brand:hover .brand-text,
+.footer-brand:focus .brand-text,
+.footer-brand:focus-visible .brand-text,
+.footer-brand:active .brand-text {
+  color: #fff !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.brand-lockup .brand-mark,
+.brand-lockup:visited .brand-mark,
+.brand-lockup:hover .brand-mark,
+.brand-lockup:focus .brand-mark,
+.brand-lockup:focus-visible .brand-mark,
+.brand-lockup:active .brand-mark,
+.footer-brand .brand-mark,
+.footer-brand:visited .brand-mark,
+.footer-brand:hover .brand-mark,
+.footer-brand:focus .brand-mark,
+.footer-brand:focus-visible .brand-mark,
+.footer-brand:active .brand-mark {
+  background: transparent !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.brand-lockup .brand-symbol,
+.brand-lockup:visited .brand-symbol,
+.brand-lockup:hover .brand-symbol,
+.brand-lockup:focus .brand-symbol,
+.brand-lockup:focus-visible .brand-symbol,
+.brand-lockup:active .brand-symbol,
+.footer-brand .brand-symbol,
+.footer-brand:visited .brand-symbol,
+.footer-brand:hover .brand-symbol,
+.footer-brand:focus .brand-symbol,
+.footer-brand:focus-visible .brand-symbol,
+.footer-brand:active .brand-symbol {
+  opacity: 1 !important;
+  filter: invert(1) !important;
+  transform: none !important;
+}
+
+/* ETAPA 04C: title rhythm proportional to title size and line-height. */
+.eyebrow,
+.section-kicker,
+.card-kicker {
+  display: block;
+  margin-top: 0;
+  margin-bottom: .78em;
+}
+
+.eyebrow + h1,
+.section-kicker + h2,
+.section-kicker + h3,
+.card-kicker + h2,
+.card-kicker + h3 {
+  margin-top: 0;
+}
+
+.hero-copy h1,
+.hero-studio-row h2,
+.body-section h2,
+.quote-band blockquote,
+.footer-cta h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.hero-copy h1 + .hero-actions {
+  margin-top: clamp(26px, .36em, 42px);
+}
+
+.hero-studio-row h2 + *,
+.body-section h2 + p,
+.body-section h2 + .btn,
+.body-section h2 + .quad-grid,
+.body-section h2 + .expertise-grid,
+.body-section h2 + .visual-grid,
+.body-section h2 + .location-grid,
+.body-section h2 + .process-grid,
+.body-section h2 + .timeline-row,
+.body-section h2 + .journal-row,
+.body-section h2 + .project-row,
+.body-section h2 + .wide-image-row,
+.body-section h2 + .mag-grid,
+.body-section h2 + .faq-list,
+.body-section h2 + .contact-form,
+.body-section h2 + .spec-table,
+.body-section h2 + .stack-list,
+.body-section h2 + .swatch-grid,
+.body-section h2 + img,
+.footer-cta h2 + .btn,
+.footer-cta h2 + a {
+  margin-top: clamp(22px, .34em, 44px);
+}
+
+.section-head,
+.rail-head,
+.section-meta {
+  row-gap: clamp(20px, 2.6vw, 42px);
+  margin-bottom: clamp(34px, 4.4vw, 68px);
+}
+
+.section-head h2,
+.rail-head h2,
+.section-meta h2,
+.split-copy h2,
+.full-image-statement h2,
+.quote-band blockquote,
+.footer-cta h2 {
+  margin-bottom: 0;
+}
+
+.split-copy .section-kicker + h2,
+.section-head .section-kicker + h2,
+.rail-head .section-kicker + h2,
+.full-image-statement .section-kicker + h2,
+.footer-cta .section-kicker + h2 {
+  margin-top: 0;
+}
+
+.split-copy h2 + p,
+.section-head h2 + p,
+.rail-head h2 + p,
+.full-image-statement h2 + p,
+.footer-cta h2 + p {
+  margin-top: clamp(22px, .34em, 44px);
+}
+
+.featured-card > div,
+.principle-card,
+.quad-grid article,
+.process-grid article,
+.expertise-grid article,
+.team-grid article,
+.mini-card-grid article,
+.location-grid article,
+.visual-grid article,
+.journey-line article,
+.stack-list article,
+.project-row article,
+.journal-row article,
+.before-grid article,
+.mag-grid article {
+  row-gap: clamp(14px, .8em, 24px);
+}
+
+.featured-card h2,
+.principle-card h3,
+.quad-grid h3,
+.process-grid h3,
+.expertise-grid h3,
+.team-grid h3,
+.mini-card-grid h3,
+.location-grid h3,
+.visual-grid h3,
+.journey-line h3,
+.stack-list h3,
+.project-row h3,
+.journal-row h3,
+.before-grid h3,
+.mag-grid h3,
+.mosaic-grid h3,
+.lightbox-caption h2,
+.lightbox-caption h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.featured-card h2 + p,
+.principle-card h3 + p,
+.quad-grid h3 + p,
+.process-grid h3 + p,
+.expertise-grid h3 + p,
+.team-grid h3 + p,
+.mini-card-grid h3 + p,
+.location-grid h3 + p,
+.visual-grid h3 + p,
+.journey-line h3 + p,
+.stack-list h3 + p,
+.project-row h3 + p,
+.journal-row h3 + p,
+.before-grid h3 + p,
+.mag-grid h3 + p,
+.lightbox-caption h2 + p,
+.lightbox-caption h3 + p {
+  margin-top: clamp(12px, .46em, 22px);
+}
+
+.card-heading-icon-wrap + h3,
+.card-heading-icon + h3,
+.quad-grid i + h3,
+.mini-card-grid i + h3 {
+  margin-top: clamp(12px, .45em, 20px);
+}
+
+.stat-item strong + span,
+.stat-ribbon strong + span,
+.awards-band strong + span,
+.process-grid span + h3,
+.stack-list span + h3,
+.journey-line span + h3 {
+  margin-top: clamp(18px, .42em, 34px);
+}
+
+@media (max-width: 767.98px) {
+  .section-head,
+  .rail-head,
+  .section-meta {
+    margin-bottom: clamp(26px, 8vw, 46px);
+  }
+
+  .hero-copy h1 + .hero-actions,
+  .body-section h2 + p,
+  .body-section h2 + .btn,
+  .body-section h2 + .quad-grid,
+  .body-section h2 + .expertise-grid,
+  .body-section h2 + .visual-grid,
+  .body-section h2 + .location-grid,
+  .body-section h2 + .process-grid,
+  .body-section h2 + .timeline-row,
+  .body-section h2 + .journal-row,
+  .body-section h2 + .project-row,
+  .body-section h2 + .wide-image-row,
+  .body-section h2 + .mag-grid,
+  .body-section h2 + .faq-list,
+  .body-section h2 + .contact-form,
+  .body-section h2 + .spec-table,
+  .body-section h2 + .stack-list,
+  .body-section h2 + .swatch-grid,
+  .body-section h2 + img,
+  .footer-cta h2 + .btn,
+  .footer-cta h2 + a {
+    margin-top: clamp(20px, 6vw, 34px);
+  }
+}
+
+/* ETAPA 04C final review: title-neighbor gaps scaled from title rhythm. */
+.eyebrow {
+  margin-bottom: clamp(20px, 2vw, 34px);
+}
+
+.section-kicker {
+  margin-bottom: clamp(18px, 1.8vw, 30px);
+}
+
+.card-kicker {
+  margin-bottom: clamp(12px, 1.2vw, 20px);
+}
+
+.hero-copy h1 + .hero-actions {
+  margin-top: clamp(28px, 2.8vw, 48px);
+}
+
+.hero-studio-row h2 + *,
+.body-section h2 + p,
+.body-section h2 + .btn,
+.body-section h2 + .quad-grid,
+.body-section h2 + .expertise-grid,
+.body-section h2 + .visual-grid,
+.body-section h2 + .location-grid,
+.body-section h2 + .process-grid,
+.body-section h2 + .timeline-row,
+.body-section h2 + .journal-row,
+.body-section h2 + .project-row,
+.body-section h2 + .wide-image-row,
+.body-section h2 + .mag-grid,
+.body-section h2 + .faq-list,
+.body-section h2 + .contact-form,
+.body-section h2 + .spec-table,
+.body-section h2 + .stack-list,
+.body-section h2 + .swatch-grid,
+.body-section h2 + img,
+.split-copy h2 + p,
+.section-head h2 + p,
+.rail-head h2 + p,
+.full-image-statement h2 + p,
+.footer-cta h2 + p,
+.footer-cta h2 + .btn,
+.footer-cta h2 + a {
+  margin-top: clamp(26px, 2.4vw, 48px);
+}
+
+.featured-card h2 + p,
+.principle-card h3 + p,
+.quad-grid h3 + p,
+.process-grid h3 + p,
+.expertise-grid h3 + p,
+.team-grid h3 + p,
+.mini-card-grid h3 + p,
+.location-grid h3 + p,
+.visual-grid h3 + p,
+.journey-line h3 + p,
+.stack-list h3 + p,
+.project-row h3 + p,
+.journal-row h3 + p,
+.before-grid h3 + p,
+.mag-grid h3 + p,
+.lightbox-caption h2 + p,
+.lightbox-caption h3 + p {
+  margin-top: clamp(14px, 1.1vw, 24px);
+}
+
+@media (max-width: 767.98px) {
+  .eyebrow {
+    margin-bottom: clamp(18px, 5vw, 26px);
+  }
+
+  .section-kicker {
+    margin-bottom: clamp(14px, 4vw, 24px);
+  }
+
+  .hero-copy h1 + .hero-actions,
+  .hero-studio-row h2 + *,
+  .body-section h2 + p,
+  .body-section h2 + .btn,
+  .body-section h2 + .quad-grid,
+  .body-section h2 + .expertise-grid,
+  .body-section h2 + .visual-grid,
+  .body-section h2 + .location-grid,
+  .body-section h2 + .process-grid,
+  .body-section h2 + .timeline-row,
+  .body-section h2 + .journal-row,
+  .body-section h2 + .project-row,
+  .body-section h2 + .wide-image-row,
+  .body-section h2 + .mag-grid,
+  .body-section h2 + .faq-list,
+  .body-section h2 + .contact-form,
+  .body-section h2 + .spec-table,
+  .body-section h2 + .stack-list,
+  .body-section h2 + .swatch-grid,
+  .body-section h2 + img,
+  .split-copy h2 + p,
+  .section-head h2 + p,
+  .rail-head h2 + p,
+  .full-image-statement h2 + p,
+  .footer-cta h2 + p,
+  .footer-cta h2 + .btn,
+  .footer-cta h2 + a {
+    margin-top: clamp(22px, 6vw, 36px);
+  }
+}
+
+/* Main menu hover stability: reserve hover spacing in the default state. */
+.nav-pill,
+.nav-pill:hover,
+.nav-pill:focus-within {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  min-width: max-content;
+  gap: 0;
+}
+
+.nav-pill .nav-item {
+  flex: 0 0 auto;
+}
+
+.nav-pill .nav-link,
+.nav-pill .nav-link:visited,
+.nav-pill .nav-link:hover,
+.nav-pill .nav-link:focus,
+.nav-pill .nav-link:focus-visible,
+.nav-pill .nav-link:active,
+.nav-pill .nav-link.active {
+  box-sizing: border-box;
+  min-height: 48px;
+  min-width: 92px;
+  padding: 12px 24px !important;
+  border: 0;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0;
+  white-space: nowrap;
+  transform: none;
+  transition: background-color .2s ease, color .2s ease, box-shadow .2s ease;
+}
+
+.nav-link-dropdown,
+.nav-link-dropdown:visited,
+.nav-link-dropdown:hover,
+.nav-link-dropdown:focus,
+.nav-link-dropdown:focus-visible,
+.nav-link-dropdown:active,
+.nav-link-dropdown.active {
+  position: relative;
+  gap: 8px;
+  padding-right: 42px !important;
+  padding-left: 24px !important;
+}
+
+.nav-link-dropdown .nav-chevron {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  display: inline-flex !important;
+  width: 16px;
+  height: 16px;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transform: translateY(-50%);
+  transition: opacity .16s ease;
+}
+
+.nav-link-dropdown .nav-chevron-up,
+.nav-dropdown.is-open .nav-chevron-down,
+.nav-dropdown:hover .nav-chevron-down,
+.nav-dropdown:focus-within .nav-chevron-down {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.nav-dropdown.is-open .nav-chevron-up,
+.nav-dropdown:hover .nav-chevron-up,
+.nav-dropdown:focus-within .nav-chevron-up {
+  opacity: 1;
+}
+
+@media (max-width: 1199.98px) and (min-width: 992px) {
+  .nav-pill .nav-link,
+  .nav-pill .nav-link:visited,
+  .nav-pill .nav-link:hover,
+  .nav-pill .nav-link:focus,
+  .nav-pill .nav-link:focus-visible,
+  .nav-pill .nav-link:active,
+  .nav-pill .nav-link.active {
+    min-width: 78px;
+    padding-right: 18px !important;
+    padding-left: 18px !important;
+  }
+
+  .nav-link-dropdown,
+  .nav-link-dropdown:visited,
+  .nav-link-dropdown:hover,
+  .nav-link-dropdown:focus,
+  .nav-link-dropdown:focus-visible,
+  .nav-link-dropdown:active,
+  .nav-link-dropdown.active {
+    padding-right: 36px !important;
+    padding-left: 18px !important;
+  }
+
+  .nav-link-dropdown .nav-chevron {
+    right: 16px;
+  }
+}
+
+/* Main menu dropdown chevron slot correction: no text overlap, no width jump. */
+.nav-link-dropdown,
+.nav-link-dropdown:visited,
+.nav-link-dropdown:hover,
+.nav-link-dropdown:focus,
+.nav-link-dropdown:focus-visible,
+.nav-link-dropdown:active,
+.nav-link-dropdown.active {
+  display: inline-flex !important;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding-right: 24px !important;
+  padding-left: 24px !important;
+}
+
+.nav-link-dropdown .nav-chevron {
+  position: static !important;
+  top: auto !important;
+  right: auto !important;
+  display: inline-flex !important;
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  align-items: center;
+  justify-content: center;
+  transform: none !important;
+}
+
+.nav-link-dropdown .nav-chevron-down {
+  opacity: 1;
+}
+
+.nav-link-dropdown .nav-chevron-up {
+  position: absolute !important;
+  top: 50% !important;
+  right: 24px !important;
+  opacity: 0;
+  transform: translateY(-50%) !important;
+  pointer-events: none;
+}
+
+.nav-dropdown.is-open .nav-chevron-down,
+.nav-dropdown:hover .nav-chevron-down,
+.nav-dropdown:focus-within .nav-chevron-down {
+  opacity: 0;
+}
+
+.nav-dropdown.is-open .nav-chevron-up,
+.nav-dropdown:hover .nav-chevron-up,
+.nav-dropdown:focus-within .nav-chevron-up {
+  opacity: 1;
+}
+
+@media (max-width: 1199.98px) and (min-width: 992px) {
+  .nav-link-dropdown,
+  .nav-link-dropdown:visited,
+  .nav-link-dropdown:hover,
+  .nav-link-dropdown:focus,
+  .nav-link-dropdown:focus-visible,
+  .nav-link-dropdown:active,
+  .nav-link-dropdown.active {
+    padding-right: 18px !important;
+    padding-left: 18px !important;
+  }
+
+  .nav-link-dropdown .nav-chevron-up {
+    right: 18px !important;
+  }
+}
+
+/* Main menu hover stability at the narrow desktop breakpoint. */
+@media (max-width: 1199.98px) and (min-width: 992px) {
+  .nav-pill,
+  .nav-pill:hover,
+  .nav-pill:focus-within {
+    min-width: 0;
+  }
+
+  .nav-pill .nav-link,
+  .nav-pill .nav-link:visited,
+  .nav-pill .nav-link:hover,
+  .nav-pill .nav-link:focus,
+  .nav-pill .nav-link:focus-visible,
+  .nav-pill .nav-link:active,
+  .nav-pill .nav-link.active {
+    min-width: 70px;
+    padding-right: 14px !important;
+    padding-left: 14px !important;
+  }
+
+  .nav-link-dropdown,
+  .nav-link-dropdown:visited,
+  .nav-link-dropdown:hover,
+  .nav-link-dropdown:focus,
+  .nav-link-dropdown:focus-visible,
+  .nav-link-dropdown:active,
+  .nav-link-dropdown.active {
+    gap: 6px;
+    padding-right: 14px !important;
+    padding-left: 14px !important;
+  }
+
+  .nav-link-dropdown .nav-chevron-up {
+    right: 14px !important;
+  }
+
+  .nav-cta.btn-sm,
+  .nav-cta.btn-sm:hover,
+  .nav-cta.btn-sm:focus,
+  .nav-cta.btn-sm:focus-visible,
+  .nav-cta.btn-sm:active {
+    min-width: 112px;
+    padding-right: 16px;
+    padding-left: 16px;
+    white-space: nowrap;
+  }
+}
+
+/* Section 06 workflow icon cards: replace numeric markers with reference-style icons. */
+.section-06 .process-grid article {
+  overflow: visible;
+}
+
+.section-06 .process-icon,
+.section-06 .process-icon:visited,
+.section-06 .process-icon:hover,
+.section-06 .process-icon:focus,
+.section-06 .process-icon:active {
+  display: inline-flex;
+  width: 56px;
+  height: 56px;
+  min-width: 56px;
+  min-height: 56px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 6px;
+  padding: 8px;
+  overflow: visible;
+  color: var(--accent);
+  font-size: 34px;
+  line-height: 1;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  transform: none;
+}
+
+.section-06 .process-icon i {
+  display: block;
+  width: 1em;
+  height: 1em;
+  overflow: visible;
+  color: inherit;
+  font-size: inherit;
+  line-height: 1;
+  text-align: center;
+}
+
+.section-06 .process-grid article h3 {
+  margin-top: 0;
+}
+
+@media (max-width: 767.98px) {
+  .section-06 .process-icon,
+  .section-06 .process-icon:visited,
+  .section-06 .process-icon:hover,
+  .section-06 .process-icon:focus,
+  .section-06 .process-icon:active {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    min-height: 50px;
+    padding: 7px;
+    font-size: 30px;
+  }
+}
+
+/* Section 06 Flaticon image icons: black source PNGs rendered in accent tone. */
+.section-06 .process-icon img {
+  display: block;
+  width: 40px;
+  height: 40px;
+  max-width: 40px;
+  max-height: 40px;
+  object-fit: contain;
+  object-position: center;
+  overflow: visible;
+  filter: brightness(0) saturate(100%) invert(68%) sepia(21%) saturate(728%) hue-rotate(3deg) brightness(89%) contrast(87%);
+}
+
+@media (max-width: 767.98px) {
+  .section-06 .process-icon img {
+    width: 36px;
+    height: 36px;
+    max-width: 36px;
+    max-height: 36px;
+  }
+}
+
+/* Section 06 Flaticon sizing refinement: larger icons, still protected from clipping. */
+.section-06 .process-icon,
+.section-06 .process-icon:visited,
+.section-06 .process-icon:hover,
+.section-06 .process-icon:focus,
+.section-06 .process-icon:active {
+  width: 64px;
+  height: 64px;
+  min-width: 64px;
+  min-height: 64px;
+  padding: 6px;
+}
+
+.section-06 .process-icon img {
+  width: 54px;
+  height: 54px;
+  max-width: 54px;
+  max-height: 54px;
+}
+
+@media (max-width: 767.98px) {
+  .section-06 .process-icon,
+  .section-06 .process-icon:visited,
+  .section-06 .process-icon:hover,
+  .section-06 .process-icon:focus,
+  .section-06 .process-icon:active {
+    width: 58px;
+    height: 58px;
+    min-width: 58px;
+    min-height: 58px;
+    padding: 6px;
+  }
+
+  .section-06 .process-icon img {
+    width: 48px;
+    height: 48px;
+    max-width: 48px;
+    max-height: 48px;
+  }
+}
