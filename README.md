@@ -16,8 +16,26 @@ The template is built with plain HTML, CSS, and JavaScript. It uses Bootstrap, j
 
 The front page template is now under active implementation and visual refinement. The repository contains the website template source and required governance files only.
 
+
+## Template Structure
+
+```text
+template/
+  index.html
+  assets/
+    css/
+    js/
+    images/
+    vendor/
+      bootstrap/
+      fontawesome/
+      simplebar/
+```
+
+The `template/` directory is the deliverable website template. Reference screenshots, local automation files, prompt notes, and temporary files are intentionally excluded from repository publishing.
 ## License
 
 This project is proprietary and all rights are reserved.
 
 You may view the source code on GitHub, but you are not permitted to use, copy, modify, distribute, commercialize, or create derivative works from this project without prior written permission.
+
