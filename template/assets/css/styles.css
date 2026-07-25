@@ -2447,6 +2447,7 @@ img {
   top: clamp(18px, 2.6vw, 28px) !important;
   right: clamp(14px, 2.6vw, 24px) !important;
   transform: none !important;
+  z-index: 900 !important;
   display: block;
   color: #fff !important;
   text-decoration: none !important;
@@ -2907,7 +2908,7 @@ body :not(i):not(.fa):not(.fas):not(.far):not(.fab):not(.fa-solid):not(.fa-regul
   top: 14px;
   right: max(16px, calc((100vw - 1772px) / 2));
   left: max(16px, calc((100vw - 1772px) / 2));
-  z-index: 999990;
+  z-index: 1040; /* Above page/reference links; below Bootstrap offcanvas, modal, popover, tooltip and toast layers. */
   width: auto;
   height: auto;
   padding: 10px 12px;
@@ -3241,4 +3242,496 @@ body :not(i):not(.fa):not(.fas):not(.far):not(.fab):not(.fa-solid):not(.fa-regul
     margin-top: 8px;
     padding-top: 8px;
   }
+}
+
+/* ETAPA 04K: final interactive text contrast guard for hover/focus/active/visited states. */
+.btn-light:visited,
+.site-footer .btn-light:visited,
+.body-close .btn-light:visited {
+  color: #050505 !important;
+}
+
+.btn-light:hover,
+.btn-light:focus,
+.btn-light:focus-visible,
+.btn-light:active,
+.site-footer .btn-light:hover,
+.site-footer .btn-light:focus,
+.site-footer .btn-light:focus-visible,
+.site-footer .btn-light:active,
+.body-close .btn-light:hover,
+.body-close .btn-light:focus,
+.body-close .btn-light:focus-visible,
+.body-close .btn-light:active,
+.contact-form button:hover,
+.contact-form button:focus,
+.contact-form button:focus-visible,
+.contact-form button:active,
+input[type="submit"]:hover,
+input[type="submit"]:focus,
+input[type="submit"]:focus-visible,
+input[type="submit"]:active,
+input[type="reset"]:hover,
+input[type="reset"]:focus,
+input[type="reset"]:focus-visible,
+input[type="reset"]:active {
+  background-color: var(--stone);
+  color: #050505 !important;
+}
+
+.nav-pill .nav-link.active,
+.nav-pill .nav-link.active:visited,
+.nav-pill .nav-link:hover,
+.nav-pill .nav-link:focus,
+.nav-pill .nav-link:focus-visible,
+.nav-pill .nav-link:active {
+  background: #090909;
+  color: #fff !important;
+}
+
+.nav-submenu a,
+.nav-submenu a:visited,
+.nav-submenu a:hover,
+.nav-submenu a:focus,
+.nav-submenu a:focus-visible,
+.nav-submenu a:active,
+.mobile-links a:not(.btn),
+.mobile-links a:not(.btn):visited,
+.mobile-links a:not(.btn):hover,
+.mobile-links a:not(.btn):focus,
+.mobile-links a:not(.btn):focus-visible,
+.mobile-links a:not(.btn):active,
+.mobile-submenu-toggle,
+.mobile-submenu-toggle:hover,
+.mobile-submenu-toggle:focus,
+.mobile-submenu-toggle:focus-visible,
+.mobile-submenu-toggle:active,
+.mobile-menu-group.is-open .mobile-submenu-toggle,
+.faq-list button,
+.faq-list button:hover,
+.faq-list button:focus,
+.faq-list button:focus-visible,
+.faq-list button:active,
+.faq-list button.active,
+.reference-link,
+.reference-link:visited,
+.reference-link:hover,
+.reference-link:focus,
+.reference-link:focus-visible,
+.reference-link:active {
+  color: #fff !important;
+}
+
+.filter-chip.active,
+.filter-chip.active:visited,
+.filter-chip:hover,
+.filter-chip:focus,
+.filter-chip:focus-visible,
+.filter-chip:active,
+.icon-btn,
+.icon-btn:visited,
+.icon-btn:hover,
+.icon-btn:focus,
+.icon-btn:focus-visible,
+.icon-btn:active,
+.navbar-toggler,
+.navbar-toggler:hover,
+.navbar-toggler:focus,
+.navbar-toggler:focus-visible,
+.navbar-toggler:active {
+  color: #050505 !important;
+}
+
+.footer-contact a,
+.footer-contact a:visited,
+.footer-contact a:hover,
+.footer-contact a:focus,
+.footer-contact a:focus-visible,
+.footer-contact a:active,
+.footer-bottom nav a,
+.footer-bottom nav a:visited,
+.footer-bottom nav a:hover,
+.footer-bottom nav a:focus,
+.footer-bottom nav a:focus-visible,
+.footer-bottom nav a:active {
+  background-color: transparent;
+  color: #fff !important;
+}
+
+.footer-social a,
+.footer-social a:visited,
+.footer-social a:hover,
+.footer-social a:focus,
+.footer-social a:focus-visible,
+.footer-social a:active {
+  color: #fff !important;
+}
+
+.contact-form input:hover,
+.contact-form input:focus,
+.contact-form input:focus-visible,
+.contact-form select:hover,
+.contact-form select:focus,
+.contact-form select:focus-visible,
+input:not([type="submit"]):not([type="reset"]):hover,
+input:not([type="submit"]):not([type="reset"]):focus,
+input:not([type="submit"]):not([type="reset"]):focus-visible,
+select:hover,
+select:focus,
+select:focus-visible,
+textarea:hover,
+textarea:focus,
+textarea:focus-visible {
+  background-color: rgba(0, 0, 0, .48);
+  color: #fff !important;
+  caret-color: #fff;
+}
+
+/* ETAPA 04D: final balanced inner spacing guard for all text-based controls. */
+.btn,
+.nav-cta,
+.hero-btn,
+.contact-form button,
+input[type="submit"],
+input[type="reset"] {
+  min-height: 48px;
+  padding: 14px 28px;
+  line-height: 1.15;
+}
+
+.btn-sm,
+.btn-sm:hover,
+.btn-sm:focus,
+.btn-sm:focus-visible,
+.btn-sm:active {
+  min-height: 48px;
+  padding: 12px 24px;
+}
+
+.nav-cta.btn-sm,
+.nav-cta.btn-sm:hover,
+.nav-cta.btn-sm:focus,
+.nav-cta.btn-sm:focus-visible,
+.nav-cta.btn-sm:active {
+  padding-right: 26px;
+  padding-left: 26px;
+}
+
+.nav-pill .nav-link,
+.nav-pill .nav-link:visited,
+.nav-pill .nav-link:hover,
+.nav-pill .nav-link:focus,
+.nav-pill .nav-link:focus-visible,
+.nav-pill .nav-link:active,
+.nav-pill .nav-link.active {
+  min-height: 48px;
+  min-width: 84px;
+  padding: 12px 24px;
+  line-height: 1.1;
+}
+
+.nav-link-dropdown,
+.nav-link-dropdown:hover,
+.nav-link-dropdown:focus,
+.nav-link-dropdown:focus-visible,
+.nav-link-dropdown:active {
+  gap: 8px;
+  padding-right: 22px;
+  padding-left: 22px;
+}
+
+.nav-submenu {
+  width: min(320px, calc(100vw - 32px));
+  padding: 12px;
+}
+
+.nav-submenu a,
+.nav-submenu a:visited,
+.nav-submenu a:hover,
+.nav-submenu a:focus,
+.nav-submenu a:focus-visible,
+.nav-submenu a:active {
+  min-height: 64px;
+  align-content: center;
+  padding: 14px 20px;
+  line-height: 1.3;
+}
+
+.filter-chip,
+.filter-chip.active,
+.filter-chip:hover,
+.filter-chip:focus,
+.filter-chip:focus-visible,
+.filter-chip:active {
+  min-height: 48px;
+  padding: 14px 28px;
+  line-height: 1.15;
+}
+
+.faq-list button,
+.faq-list button:hover,
+.faq-list button:focus,
+.faq-list button:focus-visible,
+.faq-list button:active,
+.faq-list button.active {
+  min-height: 64px;
+  padding: 20px 26px;
+  line-height: 1.2;
+}
+
+.mobile-links a:not(.btn),
+.mobile-links a:not(.btn):visited,
+.mobile-links a:not(.btn):hover,
+.mobile-links a:not(.btn):focus,
+.mobile-links a:not(.btn):focus-visible,
+.mobile-links a:not(.btn):active {
+  display: flex;
+  min-height: 48px;
+  align-items: center;
+  padding: 12px 16px;
+  line-height: 1.25;
+}
+
+.mobile-links .mobile-submenu a:not(.btn),
+.mobile-links .mobile-submenu a:not(.btn):visited,
+.mobile-links .mobile-submenu a:not(.btn):hover,
+.mobile-links .mobile-submenu a:not(.btn):focus,
+.mobile-links .mobile-submenu a:not(.btn):focus-visible,
+.mobile-links .mobile-submenu a:not(.btn):active {
+  min-height: 48px;
+  padding: 12px 18px;
+}
+
+.footer-contact a,
+.footer-contact a:visited,
+.footer-contact a:hover,
+.footer-contact a:focus,
+.footer-contact a:focus-visible,
+.footer-contact a:active,
+.footer-bottom nav a,
+.footer-bottom nav a:visited,
+.footer-bottom nav a:hover,
+.footer-bottom nav a:focus,
+.footer-bottom nav a:focus-visible,
+.footer-bottom nav a:active {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  line-height: 1.25;
+}
+
+@media (max-width: 1199.98px) and (min-width: 992px) {
+  .nav-pill .nav-link,
+  .nav-pill .nav-link:visited,
+  .nav-pill .nav-link:hover,
+  .nav-pill .nav-link:focus,
+  .nav-pill .nav-link:focus-visible,
+  .nav-pill .nav-link:active,
+  .nav-pill .nav-link.active {
+    min-width: 0;
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
+  .nav-link-dropdown,
+  .nav-link-dropdown:hover,
+  .nav-link-dropdown:focus,
+  .nav-link-dropdown:focus-visible,
+  .nav-link-dropdown:active {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+}
+
+/* ETAPA 04J: keep the post-scroll fixed topbar above body sections. */
+body.has-fixed-topbar .hero-frame {
+  z-index: 1035;
+  overflow: visible;
+}
+
+body.has-fixed-topbar .hero-navbar.is-fixed {
+  z-index: 1040;
+}
+
+/* ETAPA 04K: logo hover contrast guard. */
+.brand-lockup,
+.brand-lockup:visited,
+.brand-lockup:hover,
+.brand-lockup:focus,
+.brand-lockup:focus-visible,
+.brand-lockup:active,
+.footer-brand,
+.footer-brand:visited,
+.footer-brand:hover,
+.footer-brand:focus,
+.footer-brand:focus-visible,
+.footer-brand:active {
+  min-height: 48px;
+  padding: 0 10px 0 0;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: #fff !important;
+  text-decoration: none;
+}
+
+.brand-lockup .brand-text,
+.brand-lockup:visited .brand-text,
+.brand-lockup:hover .brand-text,
+.brand-lockup:focus .brand-text,
+.brand-lockup:focus-visible .brand-text,
+.brand-lockup:active .brand-text,
+.footer-brand .brand-text,
+.footer-brand:visited .brand-text,
+.footer-brand:hover .brand-text,
+.footer-brand:focus .brand-text,
+.footer-brand:focus-visible .brand-text,
+.footer-brand:active .brand-text {
+  color: #fff !important;
+}
+
+.brand-lockup .brand-mark,
+.footer-brand .brand-mark {
+  border-radius: var(--radius-sm);
+  transition: background-color .22s ease, box-shadow .22s ease, transform .22s ease;
+}
+
+.brand-lockup:hover .brand-mark,
+.brand-lockup:focus .brand-mark,
+.brand-lockup:focus-visible .brand-mark,
+.brand-lockup:active .brand-mark,
+.footer-brand:hover .brand-mark,
+.footer-brand:focus .brand-mark,
+.footer-brand:focus-visible .brand-mark,
+.footer-brand:active .brand-mark {
+  background: rgba(255, 255, 255, .12);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, .24);
+}
+
+.brand-lockup .brand-symbol,
+.brand-lockup:hover .brand-symbol,
+.brand-lockup:focus .brand-symbol,
+.brand-lockup:focus-visible .brand-symbol,
+.brand-lockup:active .brand-symbol,
+.footer-brand .brand-symbol,
+.footer-brand:hover .brand-symbol,
+.footer-brand:focus .brand-symbol,
+.footer-brand:focus-visible .brand-symbol,
+.footer-brand:active .brand-symbol {
+  filter: invert(1);
+}
+
+/* ETAPA 04K: close icon button contrast guard. */
+.btn-close.btn-close-white,
+.btn-close.btn-close-white:hover,
+.btn-close.btn-close-white:focus,
+.btn-close.btn-close-white:focus-visible,
+.btn-close.btn-close-white:active {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, .10);
+  color: #fff !important;
+  filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+.btn-close.btn-close-white:hover,
+.btn-close.btn-close-white:focus,
+.btn-close.btn-close-white:focus-visible,
+.btn-close.btn-close-white:active {
+  background-color: rgba(var(--accent-rgb), .18);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, .24);
+}
+
+/* ETAPA 04G: paired cropped/original reference buttons. */
+.reference-link.reference-link-cropped {
+  right: 80px !important;
+}
+
+.reference-link.reference-link-original {
+  right: 10px !important;
+}
+
+.reference-link.reference-link-cropped,
+.reference-link.reference-link-original,
+.reference-link.reference-link-cropped:visited,
+.reference-link.reference-link-original:visited,
+.reference-link.reference-link-cropped:hover,
+.reference-link.reference-link-original:hover,
+.reference-link.reference-link-cropped:focus,
+.reference-link.reference-link-original:focus,
+.reference-link.reference-link-cropped:focus-visible,
+.reference-link.reference-link-original:focus-visible,
+.reference-link.reference-link-cropped:active,
+.reference-link.reference-link-original:active {
+  width: 60px !important;
+  height: 60px !important;
+  line-height: 52px !important;
+  border: 4px solid #fff !important;
+  border-radius: 60px !important;
+  background: #000 !important;
+  color: #fff !important;
+  font-size: 24px !important;
+  font-weight: 800 !important;
+  opacity: .5;
+  text-align: center !important;
+}
+
+.reference-link.reference-link-cropped:hover,
+.reference-link.reference-link-original:hover,
+.reference-link.reference-link-cropped:focus-visible,
+.reference-link.reference-link-original:focus-visible {
+  opacity: .86;
+}
+
+body.has-fixed-topbar .reference-link.reference-link-cropped,
+body.has-fixed-topbar .reference-link.reference-link-original {
+  z-index: 900 !important;
+}
+
+@media (max-width: 575.98px) {
+  .reference-link.reference-link-cropped {
+    right: 74px !important;
+  }
+
+  .reference-link.reference-link-original {
+    right: 12px !important;
+  }
+}
+
+/* ETAPA 04G: align reference buttons to updated centered code. */
+.reference-link.reference-link-cropped,
+.reference-link.reference-link-original,
+.reference-link.reference-link-cropped:visited,
+.reference-link.reference-link-original:visited,
+.reference-link.reference-link-cropped:hover,
+.reference-link.reference-link-original:hover,
+.reference-link.reference-link-cropped:focus,
+.reference-link.reference-link-original:focus,
+.reference-link.reference-link-cropped:focus-visible,
+.reference-link.reference-link-original:focus-visible,
+.reference-link.reference-link-cropped:active,
+.reference-link.reference-link-original:active {
+  top: 50% !important;
+  transform: translate(0,-50%) !important;
+}
+
+.reference-link.reference-link-cropped:hover,
+.reference-link.reference-link-original:hover,
+.reference-link.reference-link-cropped:focus-visible,
+.reference-link.reference-link-original:focus-visible {
+  transform: translate(0,-50%) scale(1.04) !important;
+}
+
+.body-section:has(> .reference-link.reference-link-cropped) {
+  padding-top: clamp(44px, 6vw, 96px);
+}
+
+.site-footer:has(> .reference-link.reference-link-cropped) {
+  padding-top: clamp(42px, 6vw, 82px);
+}
+
+.hero-frame > .reference-link.reference-link-cropped,
+.hero-frame > .reference-link.reference-link-original {
+  top: 50% !important;
 }

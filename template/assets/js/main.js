@@ -196,8 +196,10 @@
       }
 
       var shouldFix = scrollY > 96;
-      $nav.toggleClass('is-fixed', shouldFix && !footerVisible);
+      var fixedVisible = shouldFix && !footerVisible;
+      $nav.toggleClass('is-fixed', fixedVisible);
       $nav.toggleClass('is-fixed-hidden', shouldFix && footerVisible);
+      $('body').toggleClass('has-fixed-topbar', fixedVisible);
       ticking = false;
     }
 
