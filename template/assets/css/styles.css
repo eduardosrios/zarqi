@@ -2563,3 +2563,114 @@ img {
     bottom: 22px;
   }
 }
+/* ETAPA 04A: final reading rhythm for line height and character spacing. */
+body,
+button,
+input,
+select,
+textarea,
+a,
+p,
+span,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+em {
+  letter-spacing: 0;
+}
+
+body {
+  line-height: 1.55;
+}
+
+.hero-copy h1,
+.hero-studio-row h2,
+.body-section h2,
+.quote-band blockquote,
+.footer-cta h2 {
+  line-height: 1.08;
+}
+
+.body-section h3,
+.project-row h3,
+.journal-row h3,
+.before-grid h3,
+.mosaic-grid h3,
+.featured-card h2,
+.footer-brand,
+.lightbox-caption h3 {
+  line-height: 1.2;
+}
+
+.hero-actions p,
+.hero-stat-panel p,
+.stat-item span,
+.featured-card p,
+.studio-note p,
+.principle-card p,
+.section-kicker,
+.section-head p,
+.split-note p,
+.body-section p,
+.body-section li,
+.stack-list p,
+.technical-list span,
+.spec-table span,
+.spec-table em,
+.faq-list button,
+.footer-contact a,
+.footer-contact span,
+.footer-bottom a,
+.footer-bottom span,
+.contact-form label,
+.lightbox-caption p {
+  line-height: 1.62;
+}
+
+.nav-pill .nav-link,
+.mobile-links a,
+.btn,
+.nav-cta,
+.hero-btn,
+.contact-form button,
+.filter-chip {
+  line-height: 1.22;
+}
+
+.visual-grid article,
+.location-grid article,
+.process-grid span,
+.stack-list span,
+.journey-line span,
+.stat-ribbon strong,
+.awards-band strong,
+.stat-item strong {
+  line-height: 1.05;
+}
+
+@media (max-width: 767.98px) {
+  .hero-copy h1,
+  .hero-studio-row h2,
+  .body-section h2,
+  .quote-band blockquote,
+  .footer-cta h2 {
+    line-height: 1.1;
+  }
+
+  .body-section p,
+  .body-section li,
+  .featured-card p,
+  .studio-note p,
+  .principle-card p,
+  .footer-contact a,
+  .footer-contact span,
+  .footer-bottom a,
+  .footer-bottom span {
+    line-height: 1.66;
+  }
+}
