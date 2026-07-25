@@ -87,24 +87,43 @@ img {
   height: 56px;
 }
 
-.brand-lockup {
+.brand-lockup,
+.footer-brand {
   display: inline-flex;
   align-items: center;
-  gap: 9px;
-  min-width: 128px;
+  gap: 12px;
   color: var(--ink);
-  font-size: 16px;
-  font-weight: 600;
+  font-weight: 800;
   letter-spacing: 0;
+  line-height: 1;
+}
+
+.brand-lockup {
+  min-width: 148px;
+}
+
+.brand-text {
+  font-size: 32px;
+  line-height: 1;
 }
 
 .brand-mark {
-  display: inline-grid;
-  width: 18px;
-  height: 18px;
+  display: inline-flex;
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  align-items: center;
+  justify-content: center;
   place-items: center;
   color: rgba(255, 255, 255, .9);
-  font-size: 16px;
+}
+
+.brand-symbol {
+  display: block;
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  filter: invert(1);
 }
 
 .nav-pill {
@@ -1594,17 +1613,8 @@ img {
 }
 
 .footer-brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
   margin-bottom: 22px;
   color: #fff;
-  font-size: clamp(30px, 3vw, 48px);
-  font-weight: 700;
-}
-
-.footer-brand i {
-  color: var(--accent);
 }
 
 .footer-brand-block p {
@@ -2059,9 +2069,6 @@ img {
     height: 240px;
   }
 
-  .footer-brand {
-    font-size: 30px;
-  }
 }
 
 @media (max-width: 575.98px) {
@@ -2700,7 +2707,6 @@ body {
 .before-grid h3,
 .mosaic-grid h3,
 .featured-card h2,
-.footer-brand,
 .lightbox-caption h3 {
   line-height: 1.2;
 }

@@ -10,6 +10,7 @@ The ETAPA 04E AI-generated image replacement was rolled back. The template is us
 
 The card heading icons added for ETAPA 04E are local PNG assets sourced from Flaticon and stored in `assets/img/icons/`.
 
+- Logo symbol: https://www.flaticon.com/free-icon/architecture_5705715
 - Architecture: https://www.flaticon.com/free-icon/architecture_5705715
 - Interior Design: https://www.flaticon.com/free-icon/interior-design_2642290
 - Exterior Design: https://www.flaticon.com/free-icon/landscape_14106346
