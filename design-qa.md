@@ -196,3 +196,39 @@ Verification:
 - Manrope present: true.
 - Cormorant Garamond present: true.
 - ETAPA 04 screenshots: `tmp/etapa04-desktop.png`, `tmp/etapa04-mobile.png`, `tmp/etapa04-qa.png`.
+# ETAPA 05 QA
+
+Status: passed for ETAPA 05.
+
+Interactivity/animation added:
+- GSAP 3.15.0 and ScrollTrigger added locally under `template/assets/vendor/gsap/`.
+- SimpleBar 6.3.3 added locally under `template/assets/vendor/simplebar/`.
+- Horizontal portfolio scroller now uses SimpleBar.
+- Project/gallery images open a Bootstrap lightbox modal with the clicked image and title.
+- Hero stats, body stats, and award numbers animate as counters when visible.
+- FAQ buttons now inject accessible answer panels and toggle `aria-expanded`.
+- Body sections and footer use GSAP motion-only scroll reveals.
+- Cards, icon buttons, social links, and filters have interactive hover/focus polish.
+- Contact form prevents default submit and gives inline completion feedback.
+
+Transformation opportunities reviewed:
+- Hero: animated counters and motion entry.
+- Body project/gallery sections: lightbox modal.
+- Portfolio scroller: SimpleBar custom scrollbar.
+- FAQ: accordion behavior.
+- Service/project/journal/cards: hover lift and border accent.
+- Footer: social microinteractions and CTA focus states.
+
+Final review passes:
+1. Runtime DOM check confirmed FAQ answers, SimpleBar initialization, gallery modal, and script loading.
+2. Desktop screenshot initially exposed opacity-based GSAP hiding; fixed by removing opacity hiding and keeping motion-only animation.
+3. Final desktop/mobile screenshots confirmed hero readability, no visible layout break, and all core content remains present without waiting for animation.
+
+Verification:
+- Local page load: `200 /templates/Architecture/template/`.
+- Body section count: 36.
+- GSAP present: true.
+- SimpleBar present: true.
+- Bootstrap lightbox modal present: true.
+- No `opacity: 0` or `autoAlpha` hiding remains in project JS/CSS.
+- ETAPA 05 screenshots: `tmp/etapa05-desktop-pass-02.png`, `tmp/etapa05-mobile.png`, `tmp/etapa05-qa.png`.
