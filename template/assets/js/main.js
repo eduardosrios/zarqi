@@ -317,7 +317,66 @@
             $recentProjectStory.find(".recent-project-story__progress span:first-child").text(String(recentQuoteIndex + 1).padStart(2, "0"));
         });
     }
-    $(".hero__navigation a").on("click", function () {
+    $(".considered-faq__list button").on("click", function () {
+        const $button = $(this);
+        const $item = $button.closest("article");
+        const willOpen = $button.attr("aria-expanded") !== "true";
+        const $siblings = $item.siblings("article");
+
+        $siblings.removeClass("is-open").find("button").attr("aria-expanded", "false")
+            .find("i").removeClass("fa-xmark").addClass("fa-plus");
+        $siblings.children("div").attr("hidden", true);
+        $item.toggleClass("is-open", willOpen);
+        $button.attr("aria-expanded", String(willOpen)).find("i")
+            .toggleClass("fa-xmark", willOpen).toggleClass("fa-plus", !willOpen);
+        $item.children("div").attr("hidden", !willOpen);
+    });
+    $(".conversation-contact__form").on("submit", function (event) {
+        event.preventDefault();
+        const $form = $(this);
+        const fields = $form.find("[required]").get();
+        const firstInvalid = fields.find(function (field) {
+            const invalid = !field.checkValidity();
+            $(field).attr("aria-invalid", String(invalid));
+            return invalid;
+        });
+
+        if (firstInvalid) {
+            $form.children("p").text("Please complete every field with valid details.");
+            firstInvalid.focus();
+            return;
+        }
+
+        const name = String($form.find("[name='conversationName']").val()).trim();
+        $form.children("p").text(`Thank you, ${name}. We will reply within three working days.`);
+        $form.find("button span").text("Enquiry received");
+        $form.find("button i").removeClass("fa-arrow-up").addClass("fa-check").css("transform", "none");
+        $form.find("button").prop("disabled", true);
+    });
+
+    $(".conversation-contact__form [required]").on("input", function () {
+        $(this).attr("aria-invalid", String(!this.checkValidity()));
+    });
+    const $designReasons = $(".design-reasons");
+
+    if ($designReasons.length) {
+        const $designRail = $designReasons.find("[data-design-rail]");
+        const designItems = $designRail.children("figure").length;
+        let designIndex = 0;
+
+        const setDesignItem = function (nextIndex) {
+            designIndex = (nextIndex + designItems) % designItems;
+            const rail = $designRail.get(0);
+            const item = $designRail.children("figure").get(designIndex);
+
+            rail.scrollTo({ left: item.offsetLeft - rail.offsetLeft, behavior: "smooth" });
+            $designReasons.find("[data-design-status]").text(`Interior work ${designIndex + 1} of ${designItems}`);
+        };
+
+        $designReasons.find("[data-design-direction]").on("click", function () {
+            setDesignItem(designIndex + Number($(this).data("design-direction")));
+        });
+    }    $(".hero__navigation a").on("click", function () {
         const navigation = document.getElementById("primaryNavigation");
 
         if (navigation && navigation.classList.contains("show")) {
