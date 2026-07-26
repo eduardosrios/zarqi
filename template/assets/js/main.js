@@ -192,6 +192,95 @@
             $testimonialGallery.find("[data-testimonial-status]").text(`Testimonial ${testimonialIndex + 1} of ${testimonials.length}`);
         });
     }
+    const $expertiseCarousel = $(".expertise-carousel");
+
+    if ($expertiseCarousel.length) {
+        const expertiseItems = [
+            { title: "Signature pool design", image: "assets/images/body-19-signature.webp", alt: "Bright oceanfront residence and pool", copy: "We create considered pool environments backed by technical expertise, precise detailing, and durable materials." },
+            { title: "Outdoor living", image: "assets/images/body-19-outdoor.webp", alt: "Minimal pavilion reflected in still water", copy: "Architecture, water, planting, and gathering spaces come together as one continuous outdoor experience." },
+            { title: "Resort-style estate", image: "assets/images/body-19-resort.webp", alt: "Resort pool overlooking a tropical coastline", copy: "Generous private retreats pair hospitality-level comfort with resilient landscape and pool systems." }
+        ];
+        let expertiseIndex = 0;
+
+        const setExpertiseItem = function (nextIndex) {
+            expertiseIndex = (nextIndex + expertiseItems.length) % expertiseItems.length;
+            const item = expertiseItems[expertiseIndex];
+
+            $expertiseCarousel.find("[data-expertise-image]").attr({ src: item.image, alt: item.alt });
+            $expertiseCarousel.find("[data-expertise-title]").text(item.title);
+            $expertiseCarousel.find("[data-expertise-copy]").text(item.copy);
+            $expertiseCarousel.find("[data-expertise-link]").attr({ href: `mailto:studio@zarqi.example?subject=${encodeURIComponent(item.title)}`, "aria-label": `Discuss ${item.title.toLowerCase()}` });
+            $expertiseCarousel.find("[data-expertise-status]").text(`${item.title} selected`);
+        };
+
+        $expertiseCarousel.find("[data-expertise-direction]").on("click", function () {
+            setExpertiseItem(expertiseIndex + Number($(this).data("expertise-direction")));
+        });
+        $expertiseCarousel.find("[data-expertise-index]").on("click", function () {
+            setExpertiseItem(Number($(this).data("expertise-index")));
+        });
+    }
+    const $clientVoices = $(".client-voices");
+
+    if ($clientVoices.length) {
+        const clientVoices = [
+            { quote: "We did not ask for a pool. <strong>We asked for a way of living.</strong> They returned with something extraordinary: <strong>a private garden</strong> built around still water, and a house that finally felt complete.", name: "Elliot Warren", role: "Homeowner", image: "assets/images/body-21-client.webp", alt: "Portrait of Elliot Warren" },
+            { quote: "The team made every complex choice feel clear. <strong>Our home now moves naturally between architecture, garden, and water</strong>, exactly as we imagined.", name: "Maria Gomez", role: "Creative director", image: "assets/images/body-16-client.png", alt: "Portrait of Maria Gomez" },
+            { quote: "Their care showed in every detail. The result is <strong>quiet, generous, and deeply connected to its setting</strong>, with spaces our family uses every day.", name: "Daniel Foster", role: "Homeowner", image: "assets/images/body-21-client.webp", alt: "Portrait of Daniel Foster" }
+        ];
+        let clientVoiceIndex = 0;
+
+        $clientVoices.find("[data-client-direction]").on("click", function () {
+            clientVoiceIndex = (clientVoiceIndex + Number($(this).data("client-direction")) + clientVoices.length) % clientVoices.length;
+            const client = clientVoices[clientVoiceIndex];
+            const $portrait = $clientVoices.find("[data-client-portrait]");
+
+            $portrait.addClass("is-changing").attr({ src: client.image, alt: client.alt });
+            $clientVoices.find("[data-client-quote]").html(client.quote);
+            $clientVoices.find("[data-client-name]").text(client.name);
+            $clientVoices.find("[data-client-role]").text(client.role);
+            $clientVoices.find("[data-client-status]").text(`Testimonial ${clientVoiceIndex + 1} of ${clientVoices.length}`);
+            window.setTimeout(function () { $portrait.removeClass("is-changing"); }, 180);
+        });
+    }
+    $(".private-consultation__form").on("submit", function (event) {
+        event.preventDefault();
+        const form = this;
+        const $form = $(form);
+        const $required = $form.find("[required]");
+        let firstInvalid = null;
+
+        $required.each(function () {
+            const invalid = !this.checkValidity();
+            $(this).attr("aria-invalid", String(invalid));
+            firstInvalid = firstInvalid || (invalid ? this : null);
+        });
+
+        if (firstInvalid) {
+            $form.find(".private-consultation__status").text("Please complete every required field with valid details.");
+            firstInvalid.focus();
+            return;
+        }
+
+        const firstName = String($form.find("[name='firstName']").val()).trim();
+        $form.find(".private-consultation__status").text(`Thank you, ${firstName}. Your consultation request has been received.`);
+        $form.find("button[type='submit'] span").text("Inquiry received");
+        $form.find("button[type='submit'] i").removeClass("fa-arrow-up").addClass("fa-check").css("transform", "none");
+        $form.find("button[type='submit']").prop("disabled", true);
+    });
+
+    $(".private-consultation__form [required]").on("input change", function () {
+        $(this).attr("aria-invalid", String(!this.checkValidity()));
+    });
+    $("[data-modernity-play]").on("click", function () {
+        const $button = $(this);
+        const isPlaying = $button.attr("aria-pressed") !== "true";
+
+        $button.attr({ "aria-pressed": String(isPlaying), "aria-label": isPlaying ? "Pause studio film" : "Play studio film" });
+        $button.find("i").toggleClass("fa-play", !isPlaying).toggleClass("fa-pause", isPlaying);
+        $button.closest(".modernity-film").toggleClass("is-playing", isPlaying)
+            .find("[data-modernity-status]").text(isPlaying ? "Studio film playing" : "Studio film paused");
+    });
     $(".hero__navigation a").on("click", function () {
         const navigation = document.getElementById("primaryNavigation");
 
