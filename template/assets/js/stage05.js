@@ -86,9 +86,16 @@
         let gallery = [];
         let activeIndex = 0;
         let lastFocused = null;
+        let pausedBackgroundVideos = [];
 
         function showDialog() {
             lastFocused = document.activeElement;
+            pausedBackgroundVideos = [...document.querySelectorAll(".stage04-video")].filter(function (backgroundVideo) {
+                return !backgroundVideo.paused;
+            });
+            pausedBackgroundVideos.forEach(function (backgroundVideo) {
+                backgroundVideo.pause();
+            });
             document.body.classList.add("stage05-modal-open");
             if (typeof dialog.showModal === "function") {
                 dialog.showModal();
@@ -186,8 +193,25 @@
             video.load();
             document.body.classList.remove("stage05-modal-open");
             announcer.textContent = "Media viewer closed";
+            pausedBackgroundVideos.forEach(function (backgroundVideo) {
+                backgroundVideo.play().catch(function () {});
+            });
+            pausedBackgroundVideos = [];
             if (lastFocused && typeof lastFocused.focus === "function") {
                 lastFocused.focus();
+            }
+        });
+
+        document.addEventListener("visibilitychange", function () {
+            if (!dialog.open || video.hidden) {
+                return;
+            }
+            if (document.hidden && !video.paused) {
+                video.dataset.resumeOnVisible = "true";
+                video.pause();
+            } else if (!document.hidden && video.dataset.resumeOnVisible === "true") {
+                delete video.dataset.resumeOnVisible;
+                video.play().catch(function () {});
             }
         });
 
