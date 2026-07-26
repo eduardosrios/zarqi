@@ -6,8 +6,13 @@
 
     if (reviewSection) {
         document.body.classList.add("review-mode");
-        $(".hero, .body-section").attr("hidden", true);
-        $(`.body-section[data-section="${reviewSection}"]`).removeAttr("hidden");
+        $(".hero, .body-section, .site-footer").attr("hidden", true);
+
+        if (reviewSection === "footer") {
+            $(".site-footer").removeAttr("hidden");
+        } else {
+            $(`.body-section[data-section="${reviewSection}"]`).removeAttr("hidden");
+        }
     }
 
     $playButton.on("click", function () {
@@ -376,7 +381,29 @@
         $designReasons.find("[data-design-direction]").on("click", function () {
             setDesignItem(designIndex + Number($(this).data("design-direction")));
         });
-    }    $(".hero__navigation a").on("click", function () {
+    }    $(".site-footer__newsletter").on("submit", function (event) {
+        event.preventDefault();
+        const $form = $(this);
+        const $email = $form.find("input[type='email']");
+        const valid = $email.get(0).checkValidity();
+
+        $email.attr("aria-invalid", String(!valid));
+
+        if (!valid) {
+            $form.children("p").text("Enter a valid email address.");
+            $email.focus();
+            return;
+        }
+
+        $form.children("p").text("You are subscribed to the Zarqi journal.");
+        $email.val("").attr({ "aria-invalid": "false", placeholder: "Journal subscribed" }).prop("disabled", true);
+        $form.find("button i").removeClass("fa-arrow-right").addClass("fa-check");
+        $form.find("button").prop("disabled", true).attr("aria-label", "Subscription confirmed");
+    });
+
+    $(".site-footer__newsletter input").on("input", function () {
+        $(this).attr("aria-invalid", String(!this.checkValidity()));
+    });    $(".hero__navigation a").on("click", function () {
         const navigation = document.getElementById("primaryNavigation");
 
         if (navigation && navigation.classList.contains("show")) {
