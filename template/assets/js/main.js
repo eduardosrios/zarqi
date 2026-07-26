@@ -122,6 +122,76 @@
         });
         updateProjectGallery();
     }
+    const $projectBrowser = $(".project-browser");
+
+    if ($projectBrowser.length) {
+        const browserProjects = [
+            { label: "Architecture", image: "assets/images/body-14-architecture.webp", alt: "Modern civic building with terracotta fins", title: "Modern, sustainable, & innovative architecture solution." },
+            { label: "Interior", image: "assets/images/body-11-interior.webp", alt: "Warm oak living interior", title: "Quiet interiors composed through material, light, and proportion." },
+            { label: "Residential", image: "assets/images/body-09-courtyard-pond.png", alt: "Contemporary courtyard residence beside a reflecting pond", title: "Private homes grounded in landscape and everyday rituals." },
+            { label: "Exterior", image: "assets/images/body-08-architecture.webp", alt: "Low-profile timber residence in a wide landscape", title: "Expressive envelopes built for climate, context, and longevity." },
+            { label: "Floor planning", image: "assets/images/body-05-elevation.webp", alt: "Architectural elevation study", title: "Clear spatial planning that turns constraints into opportunity." }
+        ];
+        const $browserButtons = $projectBrowser.find("[data-browser-project]");
+        const $browserFigure = $projectBrowser.find(".project-browser__feature");
+        const $browserImage = $projectBrowser.find("[data-browser-image]");
+        const $browserTitle = $projectBrowser.find("[data-browser-title]");
+        const $browserLink = $projectBrowser.find("[data-browser-link]");
+        const $browserStatus = $projectBrowser.find("[data-browser-status]");
+        let browserIndex = 0;
+
+        const setBrowserProject = function (nextIndex) {
+            browserIndex = (nextIndex + browserProjects.length) % browserProjects.length;
+            const project = browserProjects[browserIndex];
+
+            $browserButtons.removeClass("is-active").attr("aria-pressed", "false")
+                .filter(`[data-browser-project="${browserIndex}"]`).addClass("is-active").attr("aria-pressed", "true");
+            $browserFigure.addClass("is-changing");
+            $browserImage.attr({ src: project.image, alt: project.alt });
+            $browserTitle.text(project.title);
+            $browserLink.attr({ href: `mailto:studio@zarqi.example?subject=${encodeURIComponent(project.label + " project")}`, "aria-label": `Discuss this ${project.label.toLowerCase()} project` });
+            $browserStatus.text(`${project.label} project selected`);
+            window.setTimeout(function () { $browserFigure.removeClass("is-changing"); }, 180);
+        };
+
+        $browserButtons.on("click", function () {
+            setBrowserProject(Number($(this).data("browser-project")));
+        });
+        $projectBrowser.find("[data-browser-direction]").on("click", function () {
+            setBrowserProject(browserIndex + Number($(this).data("browser-direction")));
+        });
+    }
+    $(".service-spectrum__tab").on("click", function () {
+        const $tab = $(this);
+        const $item = $tab.closest(".service-spectrum__item");
+        const $items = $item.siblings(".service-spectrum__item");
+
+        $items.removeClass("is-active").find(".service-spectrum__tab").attr("aria-expanded", "false");
+        $items.find(".service-spectrum__panel").attr("hidden", true);
+        $item.addClass("is-active");
+        $tab.attr("aria-expanded", "true");
+        $item.find(".service-spectrum__panel").removeAttr("hidden");
+    });
+    const $testimonialGallery = $(".testimonial-gallery");
+
+    if ($testimonialGallery.length) {
+        const testimonials = [
+            { quote: "Incredible architects, seamless process, & stunning designs; our dream space became a reality!", name: "Maria Gomez", location: "London, UK" },
+            { quote: "Zarqi translated a complex brief into a home that feels calm, generous, and unmistakably ours.", name: "Daniel Foster", location: "Lisbon, Portugal" },
+            { quote: "Every decision was precise and collaborative, from the first plan to the final material detail.", name: "Amina Rahman", location: "Copenhagen, Denmark" }
+        ];
+        let testimonialIndex = 0;
+
+        $testimonialGallery.find("[data-testimonial-direction]").on("click", function () {
+            testimonialIndex = (testimonialIndex + Number($(this).data("testimonial-direction")) + testimonials.length) % testimonials.length;
+            const testimonial = testimonials[testimonialIndex];
+
+            $testimonialGallery.find("[data-testimonial-quote]").text(testimonial.quote);
+            $testimonialGallery.find("[data-testimonial-name]").text(testimonial.name);
+            $testimonialGallery.find("[data-testimonial-location]").text(testimonial.location);
+            $testimonialGallery.find("[data-testimonial-status]").text(`Testimonial ${testimonialIndex + 1} of ${testimonials.length}`);
+        });
+    }
     $(".hero__navigation a").on("click", function () {
         const navigation = document.getElementById("primaryNavigation");
 
