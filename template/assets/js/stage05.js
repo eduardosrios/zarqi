@@ -42,8 +42,12 @@
 
     function createMediaDialog() {
         const dialog = document.createElement("dialog");
+        const announcer = document.createElement("p");
         dialog.className = "stage05-media-dialog";
         dialog.setAttribute("aria-label", "Zarqi media viewer");
+        announcer.className = "visually-hidden";
+        announcer.setAttribute("role", "status");
+        announcer.setAttribute("aria-live", "polite");
         dialog.innerHTML = `
             <div class="stage05-media-dialog__layout">
                 <header class="stage05-media-dialog__toolbar">
@@ -69,6 +73,7 @@
             </div>
         `;
         document.body.append(dialog);
+        document.body.append(announcer);
 
         const image = dialog.querySelector(".stage05-media-dialog__image");
         const video = dialog.querySelector(".stage05-media-dialog__video");
@@ -104,6 +109,7 @@
             title.textContent = "Project image";
             caption.textContent = item.alt || "Zarqi architecture and design";
             count.textContent = `${activeIndex + 1} / ${gallery.length}`;
+            announcer.textContent = `${caption.textContent}, image ${activeIndex + 1} of ${gallery.length}`;
         }
 
         function openImage(items, index) {
@@ -130,6 +136,7 @@
             title.textContent = item.title;
             caption.textContent = "Architecture film";
             count.textContent = "";
+            announcer.textContent = `${item.title} opened`;
             showDialog();
             video.play().catch(function () {
                 video.controls = true;
@@ -178,6 +185,7 @@
             video.removeAttribute("src");
             video.load();
             document.body.classList.remove("stage05-modal-open");
+            announcer.textContent = "Media viewer closed";
             if (lastFocused && typeof lastFocused.focus === "function") {
                 lastFocused.focus();
             }
