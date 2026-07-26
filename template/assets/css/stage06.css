@@ -1,6 +1,29 @@
 /* Final responsive layer: preserve the reference compositions while closing
    transition-width and compact-phone gaps found in the Stage 06 audit. */
 
+.stage05-media-dialog:not([open]) {
+    display: none;
+}
+
+.stage04-video-variant.selected-works-grid > header {
+    position: absolute;
+    top: clamp(5rem, 8vw, 7rem);
+    right: var(--section-side);
+    left: var(--section-side);
+    width: auto;
+}
+
+.stage04-video-variant.selected-works-grid > .selected-works-grid__commission {
+    position: absolute;
+    top: auto;
+    right: var(--section-side);
+    bottom: var(--section-side);
+    left: auto;
+}
+
+.stage04-video-variant.selected-works-grid > .selected-works-grid__items {
+    display: none;
+}
 :is(
     .selected-projects__all,
     .vision-cta__link,
@@ -152,6 +175,16 @@
 }
 
 @media (max-width: 35.999rem) {
+    .stage04-video-variant.selected-works-grid > header {
+        top: 4rem;
+    }
+
+    .stage04-video-variant.selected-works-grid > .selected-works-grid__commission {
+        right: auto;
+        bottom: 5.25rem;
+        left: var(--section-side);
+    }
+
     .quiet-collection h2 {
         right: var(--section-side);
         left: var(--section-side);
@@ -180,8 +213,7 @@
 
     .conversation-contact h2 {
         max-width: 100%;
-        font-size: 2.9rem;
-        overflow-wrap: anywhere;
+        font-size: 2.55rem;
     }
 
     .conversation-contact__form {
