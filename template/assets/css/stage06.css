@@ -1,0 +1,220 @@
+/* Final responsive layer: preserve the reference compositions while closing
+   transition-width and compact-phone gaps found in the Stage 06 audit. */
+
+:where(
+    .selected-projects__all,
+    .vision-cta__link,
+    .studio-manifesto__footer a,
+    .project-mosaic__card > a,
+    .recent-project-story__frame article > a,
+    .selected-works-grid__commission,
+    .site-footer__links > a,
+    .site-footer__studios > a
+) {
+    display: inline-flex;
+    min-height: var(--zarqi-control);
+    align-items: center;
+}
+
+.project-gallery__segments button,
+.project-gallery__pagination button,
+.recent-project-story__project-controls button,
+.recent-project-story__testimonial button,
+.site-footer__newsletter button {
+    width: var(--zarqi-control);
+    min-width: var(--zarqi-control);
+    height: var(--zarqi-control);
+}
+
+.site-footer__studios > div a {
+    display: inline-flex;
+    width: var(--zarqi-control);
+    min-width: var(--zarqi-control);
+    height: var(--zarqi-control);
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 74.999rem) {
+    .services-index__layout {
+        grid-template-columns: minmax(0, 1fr);
+        min-height: 0;
+        gap: 4rem;
+    }
+
+    .services-index__intro img {
+        display: none;
+    }
+
+    .project-gallery__filters {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem 2rem;
+    }
+
+    .project-gallery__segments,
+    .project-gallery__reset {
+        justify-self: start;
+    }
+
+    .pool-stats {
+        min-height: 0;
+        padding: 5rem var(--section-side);
+    }
+
+    .pool-stats__eyebrow,
+    .pool-stats h2,
+    .pool-stats__feature,
+    .pool-stats__metrics,
+    .pool-stats__contact {
+        position: static;
+    }
+
+    .pool-stats h2 {
+        margin-top: 2.5rem;
+        text-align: left;
+    }
+
+    .pool-stats h2 .pool-stats__line {
+        white-space: normal;
+    }
+
+    .pool-stats h2 .pool-stats__line--wide {
+        transform: none;
+    }
+
+    .pool-stats__feature {
+        width: min(100%, 35rem);
+        margin-top: 3rem;
+    }
+
+    .pool-stats__metrics {
+        position: static;
+        margin-top: 2rem;
+    }
+
+    .pool-stats__contact {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 61.999rem) {
+    .hero__navigation {
+        overscroll-behavior: contain;
+    }
+
+    .modernity-film__panel {
+        display: grid;
+        align-content: center;
+        justify-items: center;
+        gap: 2rem;
+        padding: 3rem 1.5rem;
+    }
+
+    .modernity-film__panel button,
+    .modernity-film__panel h2 {
+        position: static;
+        transform: none;
+    }
+
+    .modernity-film__panel h2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .modernity-film__panel > p {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .selected-works-grid header {
+        width: 100%;
+    }
+
+    .selected-works-grid__commission {
+        min-width: max-content;
+    }
+
+    .speaking-spaces__card {
+        min-width: 0;
+    }
+}
+
+@media (max-width: 35.999rem) {
+    .quiet-collection h2 {
+        right: var(--section-side);
+        left: var(--section-side);
+        width: auto;
+        font-size: 2.35rem;
+        transform: none;
+    }
+
+    .pool-stats__metrics {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .pool-stats__metrics > div {
+        height: auto;
+        min-height: 12rem;
+    }
+
+    .modernity-film__panel {
+        min-height: 23rem;
+        padding-inline: var(--section-side);
+    }
+
+    .modernity-film__panel h2 {
+        font-size: 2.75rem;
+    }
+
+    .conversation-contact h2 {
+        max-width: 100%;
+        font-size: 2.9rem;
+        overflow-wrap: anywhere;
+    }
+
+    .conversation-contact__form {
+        min-width: 0;
+        padding-inline: 1rem;
+    }
+
+    .speaking-spaces__card {
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 22.5rem) {
+    .hero h1 {
+        font-size: 2.95rem;
+    }
+
+    .selected-works-grid h2,
+    .speaking-spaces h2 {
+        font-size: 2.65rem;
+    }
+
+    .design-reasons h2 {
+        font-size: 3.2rem;
+    }
+
+    .site-footer {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 2.5rem;
+    }
+
+    .site-footer__brand,
+    .site-footer__links,
+    .site-footer__studios {
+        grid-column: 1;
+    }
+
+    .site-footer__links > a,
+    .site-footer__studios > a {
+        width: fit-content;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero__navigation {
+        scroll-behavior: auto;
+    }
+}
