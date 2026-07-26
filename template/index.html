@@ -7,16 +7,20 @@
     <title>Zarqi Architecture</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&amp;family=Manrope:wght@500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/stage04.css">
 </head>
 <body>
     <header class="hero" id="home">
         <nav class="navbar navbar-expand-lg navbar-dark hero__nav" aria-label="Primary navigation">
             <div class="container-fluid p-0">
-                <a class="navbar-brand hero__brand" href="#home" aria-label="Zarqi home">ZARQI</a>
+                <a class="navbar-brand hero__brand brand-lockup" href="#home" aria-label="Zarqi home">
+                    <img src="assets/images/stage04-icons/zarqi-logo-symbol.png" alt="" aria-hidden="true">
+                    <span>ZARQI</span>
+                </a>
 
                 <button
                     class="navbar-toggler hero__menu-button"
@@ -32,8 +36,24 @@
 
                 <div class="collapse navbar-collapse hero__navigation" id="primaryNavigation">
                     <ul class="navbar-nav hero__links">
-                        <li class="nav-item"><a class="nav-link" href="#selected-work">Projects</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#studio">Studio</a></li>
+                        <li class="nav-item nav-dropdown">
+                            <a class="nav-link" href="#selected-work">Projects</a>
+                            <button class="nav-dropdown__toggle" type="button" aria-expanded="false" aria-label="Open Projects submenu"><i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+                            <div class="nav-dropdown__menu">
+                                <a href="#selected-work">Selected work</a>
+                                <a href="#project-gallery">Project gallery</a>
+                                <a href="#journal">Recent stories</a>
+                            </div>
+                        </li>
+                        <li class="nav-item nav-dropdown">
+                            <a class="nav-link" href="#studio">Studio</a>
+                            <button class="nav-dropdown__toggle" type="button" aria-expanded="false" aria-label="Open Studio submenu"><i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+                            <div class="nav-dropdown__menu">
+                                <a href="#studio">Practice</a>
+                                <a href="#services">Expertise</a>
+                                <a href="#contact">Start a conversation</a>
+                            </div>
+                        </li>
                         <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
                         <li class="nav-item"><a class="nav-link" href="#journal">Journal</a></li>
                     </ul>
@@ -767,10 +787,10 @@
                 <p>Our buildings combine minimalism with clarity of line and form. Each one is designed as an integral part of its surrounding landscape.</p>
             </header>
             <div class="architecture-services__rail" id="architecture-services-rail">
-                <a href="mailto:studio@zarqi.example?subject=Exterior%20planning" class="architecture-services__card--exterior"><i class="fa-regular fa-object-group" aria-hidden="true"></i><span>Exterior planning</span></a>
-                <a href="mailto:studio@zarqi.example?subject=Architecture" class="architecture-services__card--architecture"><i class="fa-solid fa-cube" aria-hidden="true"></i><span>Architecture</span></a>
-                <a href="mailto:studio@zarqi.example?subject=Residential%20space" class="architecture-services__card--residential"><i class="fa-solid fa-arrow-pointer" aria-hidden="true"></i><span>Residential space</span></a>
-                <a href="mailto:studio@zarqi.example?subject=Interior%20design" class="architecture-services__card--interior"><i class="fa-regular fa-square" aria-hidden="true"></i><span>Interior design</span></a>
+                <a href="mailto:studio@zarqi.example?subject=Exterior%20planning" class="architecture-services__card--exterior"><img src="assets/images/stage04-icons/landscape.png" alt="" aria-hidden="true"><span>Exterior planning</span></a>
+                <a href="mailto:studio@zarqi.example?subject=Architecture" class="architecture-services__card--architecture"><img src="assets/images/stage04-icons/architecture.png" alt="" aria-hidden="true"><span>Architecture</span></a>
+                <a href="mailto:studio@zarqi.example?subject=Residential%20space" class="architecture-services__card--residential"><img src="assets/images/stage04-icons/residential.png" alt="" aria-hidden="true"><span>Residential space</span></a>
+                <a href="mailto:studio@zarqi.example?subject=Interior%20design" class="architecture-services__card--interior"><img src="assets/images/stage04-icons/interior-design.png" alt="" aria-hidden="true"><span>Interior design</span></a>
             </div>
             <div class="architecture-services__partners" aria-label="Selected collaborators">
                 <span><i class="fa-solid fa-mountain-city" aria-hidden="true"></i>Atelier North</span>
@@ -875,7 +895,7 @@
             </div>
         </section>
 
-        <section class="body-section conversation-contact" data-section="33" aria-labelledby="conversation-contact-title">
+        <section class="body-section conversation-contact" id="contact" data-section="33" aria-labelledby="conversation-contact-title">
             <div class="conversation-contact__intro"><p>Private consultation</p><h2 id="conversation-contact-title">Begin with<br>a<br>conversation.</h2><span>Tell us about the place you imagine. Our studio will respond personally within three working days.</span></div>
             <form class="conversation-contact__form" novalidate>
                 <label><span class="visually-hidden">Your name</span><input name="conversationName" type="text" autocomplete="name" placeholder="Your name" required></label>
@@ -938,7 +958,10 @@
 
     <footer class="site-footer" aria-label="Site footer">
         <div class="site-footer__brand">
-            <a class="site-footer__logo" href="#" aria-label="Zarqi home">ZARQI</a>
+            <a class="site-footer__logo brand-lockup" href="#home" aria-label="Zarqi home">
+                <img src="assets/images/stage04-icons/zarqi-logo-symbol.png" alt="" aria-hidden="true">
+                <span>ZARQI</span>
+            </a>
             <p>A journal of architecture, material and the spaces between.<br>Published quietly, four times a year.</p>
             <form class="site-footer__newsletter" novalidate>
                 <label>
@@ -969,5 +992,6 @@
     <script src="assets/vendor/jquery/jquery-4.0.0.min.js"></script>
     <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/stage04.js"></script>
 </body>
 </html>
