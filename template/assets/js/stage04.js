@@ -144,22 +144,46 @@
     }
 
     function initializeDropdowns() {
+        function closeDropdown(item) {
+            const button = item.querySelector(".nav-dropdown__toggle");
+            item.classList.remove("is-open");
+            button.setAttribute("aria-expanded", "false");
+            button.setAttribute("aria-label", `Open ${item.querySelector(".nav-link").textContent.trim()} submenu`);
+        }
+
         document.querySelectorAll(".nav-dropdown__toggle").forEach(function (button) {
             button.addEventListener("click", function () {
                 const item = button.closest(".nav-dropdown");
                 const willOpen = !item.classList.contains("is-open");
 
                 document.querySelectorAll(".nav-dropdown.is-open").forEach(function (openItem) {
-                    openItem.classList.remove("is-open");
-                    openItem.querySelector(".nav-dropdown__toggle").setAttribute("aria-expanded", "false");
+                    closeDropdown(openItem);
                 });
                 item.classList.toggle("is-open", willOpen);
                 button.setAttribute("aria-expanded", String(willOpen));
                 button.setAttribute("aria-label", `${willOpen ? "Close" : "Open"} ${item.querySelector(".nav-link").textContent.trim()} submenu`);
             });
         });
-    }
 
+        document.addEventListener("click", function (event) {
+            if (!event.target.closest(".nav-dropdown")) {
+                document.querySelectorAll(".nav-dropdown.is-open").forEach(closeDropdown);
+            }
+        });
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key !== "Escape") {
+                return;
+            }
+
+            const openDropdown = document.querySelector(".nav-dropdown.is-open");
+            if (openDropdown) {
+                const button = openDropdown.querySelector(".nav-dropdown__toggle");
+                closeDropdown(openDropdown);
+                button.focus();
+            }
+        });
+    }
     function initializeFixedNavigation() {
         const navigation = document.querySelector(".hero__nav");
         const footer = document.querySelector(".site-footer");
