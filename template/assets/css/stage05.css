@@ -1,0 +1,303 @@
+.stage05-scroll-progress {
+    position: fixed;
+    inset: 0 0 auto;
+    z-index: 2100;
+    height: 0.25rem;
+    pointer-events: none;
+    background: var(--zarqi-bronze);
+    transform: scaleX(0);
+    transform-origin: left center;
+    will-change: transform;
+}
+
+.hero__links > .nav-item > .nav-link.is-current {
+    color: var(--zarqi-bronze);
+}
+
+.hero__links > .nav-item > .nav-link.is-current::after {
+    width: 100%;
+}
+
+img.stage05-lightbox-item {
+    cursor: zoom-in;
+    transition: filter 220ms ease, opacity 220ms ease;
+}
+
+img.stage05-lightbox-item:hover {
+    filter: contrast(1.03);
+    opacity: 0.94;
+}
+
+img.stage05-lightbox-item:focus-visible {
+    outline: 3px solid var(--zarqi-bronze);
+    outline-offset: 0.25rem;
+}
+
+.stage05-media-dialog {
+    width: 100vw;
+    max-width: none;
+    height: 100dvh;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    background: var(--zarqi-black);
+    color: var(--zarqi-white);
+}
+
+.stage05-media-dialog::backdrop {
+    background: rgba(0, 0, 0, 0.88);
+}
+
+.stage05-media-dialog__layout {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-rows: 4.5rem minmax(0, 1fr) 4.5rem;
+}
+
+.stage05-media-dialog__toolbar,
+.stage05-media-dialog__footer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1.875rem;
+}
+
+.stage05-media-dialog__toolbar {
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.stage05-media-dialog__toolbar p,
+.stage05-media-dialog__footer p {
+    margin: 0;
+    color: var(--zarqi-white);
+}
+
+.stage05-media-dialog__toolbar p {
+    font-weight: 700;
+}
+
+.stage05-media-dialog__close,
+.stage05-media-dialog__nav {
+    display: inline-flex;
+    width: 3rem;
+    min-width: 3rem;
+    height: 3rem;
+    min-height: 3rem !important;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.48);
+    border-radius: 50%;
+    background: transparent;
+    color: var(--zarqi-white);
+}
+
+.stage05-media-dialog__close:hover,
+.stage05-media-dialog__nav:hover {
+    border-color: var(--zarqi-bronze);
+    background: var(--zarqi-bronze);
+    color: var(--zarqi-charcoal);
+}
+
+.stage05-media-dialog__stage {
+    position: relative;
+    display: grid;
+    min-width: 0;
+    min-height: 0;
+    place-items: center;
+    padding: 1.875rem 6rem;
+}
+
+.stage05-media-dialog__image,
+.stage05-media-dialog__video {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.stage05-media-dialog__image {
+    width: auto;
+    height: auto;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.42);
+}
+
+.stage05-media-dialog__video {
+    width: min(80rem, 100%);
+    aspect-ratio: 16 / 9;
+    background: var(--zarqi-black);
+}
+
+.stage05-media-dialog__nav {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    width: 3.5rem;
+    min-width: 3.5rem;
+    height: 3.5rem;
+    transform: translateY(-50%);
+}
+
+.stage05-media-dialog__nav--previous {
+    left: 1.875rem;
+}
+
+.stage05-media-dialog__nav--next {
+    right: 1.875rem;
+}
+
+.stage05-media-dialog__nav[hidden],
+.stage05-media-dialog__image[hidden],
+.stage05-media-dialog__video[hidden] {
+    display: none;
+}
+
+.stage05-media-dialog__footer {
+    justify-content: space-between;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.stage05-media-dialog__footer p:first-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.stage05-media-dialog__count {
+    flex: 0 0 auto;
+    color: var(--zarqi-bronze) !important;
+}
+
+body.stage05-modal-open {
+    overflow: hidden;
+}
+
+.stage05-quick-contact {
+    position: fixed;
+    right: 1.875rem;
+    bottom: 1.875rem;
+    z-index: 1100;
+    display: inline-flex;
+    width: 3.5rem;
+    min-width: 3.5rem;
+    height: 3.5rem;
+    min-height: 3.5rem;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--zarqi-white);
+    border-radius: 50%;
+    background: var(--zarqi-charcoal);
+    color: var(--zarqi-white);
+    text-decoration: none;
+    box-shadow: 0 0.75rem 2rem rgba(0, 0, 0, 0.24);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(1rem);
+}
+
+.stage05-quick-contact.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.stage05-quick-contact:hover,
+.stage05-quick-contact:focus-visible {
+    border-color: var(--zarqi-charcoal);
+    background: var(--zarqi-bronze);
+    color: var(--zarqi-charcoal);
+    transform: translateY(-0.125rem);
+}
+
+[data-stage05-tooltip] {
+    position: relative;
+}
+
+[data-stage05-tooltip]::after {
+    position: absolute;
+    right: calc(100% + 0.75rem);
+    top: 50%;
+    width: max-content;
+    max-width: 14rem;
+    padding: 0.5rem 0.75rem;
+    visibility: hidden;
+    background: var(--zarqi-charcoal);
+    color: var(--zarqi-white);
+    content: attr(data-stage05-tooltip);
+    font-family: "Manrope", Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.35;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(0.5rem, -50%);
+    transition: opacity 160ms ease, transform 160ms ease, visibility 160ms ease;
+}
+
+[data-stage05-tooltip]:hover::after,
+[data-stage05-tooltip]:focus-visible::after {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0, -50%);
+}
+
+.stage05-motion-target {
+    will-change: transform, opacity;
+}
+
+@media (max-width: 47.999rem) {
+    .stage05-media-dialog__layout {
+        grid-template-rows: 4rem minmax(0, 1fr) 5rem;
+    }
+
+    .stage05-media-dialog__toolbar,
+    .stage05-media-dialog__footer {
+        padding-inline: 1.25rem;
+    }
+
+    .stage05-media-dialog__stage {
+        padding: 1.25rem;
+    }
+
+    .stage05-media-dialog__nav {
+        top: auto;
+        bottom: 1.25rem;
+    }
+
+    .stage05-media-dialog__nav--previous {
+        left: 1.25rem;
+    }
+
+    .stage05-media-dialog__nav--next {
+        right: 1.25rem;
+    }
+
+    .stage05-media-dialog__footer {
+        padding-inline: 5.5rem;
+    }
+
+    .stage05-media-dialog__footer p:first-child {
+        display: none;
+    }
+
+    .stage05-media-dialog__count {
+        width: 100%;
+        text-align: center;
+    }
+
+    .stage05-quick-contact {
+        right: 1.25rem;
+        bottom: 1.25rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .stage05-scroll-progress,
+    .stage05-motion-target {
+        transition: none;
+    }
+}
