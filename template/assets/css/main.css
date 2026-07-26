@@ -3611,6 +3611,861 @@ a {
     line-height: 1;
     -webkit-text-stroke: 1px #303030;
 }
+.architecture-services {
+    min-height: 71.25rem;
+    overflow: hidden;
+    background: #191919;
+    color: #f8f8f5;
+    font-family: "Manrope", Arial, Helvetica, sans-serif;
+}
+
+.architecture-services__header {
+    position: absolute;
+    top: 5.9rem;
+    right: 16.55%;
+    left: 16.55%;
+    display: grid;
+    grid-template-columns: 1.25fr 0.8fr;
+    gap: 7rem;
+    align-items: end;
+}
+
+.architecture-services__header > div > p {
+    margin: 0 0 1.25rem;
+    color: #efff00;
+    font-size: 0.78rem;
+    font-weight: 650;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+}
+
+.architecture-services h2 {
+    margin: 0;
+    font-size: 2.35rem;
+    font-weight: 650;
+    letter-spacing: 0;
+    line-height: 1.22;
+}
+
+.architecture-services__header > p {
+    max-width: 25rem;
+    margin: 0 0 0.15rem;
+    color: #777;
+    font-size: 1rem;
+    letter-spacing: 0;
+    line-height: 1.75;
+}
+
+.architecture-services__rail {
+    position: absolute;
+    top: 18.15rem;
+    right: 0;
+    left: 16.55%;
+    display: flex;
+    gap: 2.1rem;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scrollbar-width: none;
+    scroll-snap-type: inline mandatory;
+}
+
+.architecture-services__rail::-webkit-scrollbar {
+    display: none;
+}
+
+.architecture-services__rail a {
+    position: relative;
+    flex: 0 0 24.9rem;
+    height: 30.7rem;
+    overflow: hidden;
+    background-color: #333;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    scroll-snap-align: start;
+    text-decoration: none;
+}
+
+.architecture-services__rail a::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.02) 35%, rgba(0, 0, 0, 0.72) 100%);
+    transition: background-color 300ms ease;
+}
+
+.architecture-services__rail a > i {
+    position: absolute;
+    top: 3.65rem;
+    left: 4rem;
+    z-index: 1;
+    color: #fff;
+    font-size: 2.45rem;
+}
+
+.architecture-services__rail a > span {
+    position: absolute;
+    right: 2rem;
+    bottom: 4rem;
+    left: 3.75rem;
+    z-index: 1;
+    font-size: 1.35rem;
+    font-weight: 600;
+    letter-spacing: 0;
+}
+
+.architecture-services__rail a:focus-visible,
+.architecture-services__rail a:hover {
+    outline: 2px solid #efff00;
+    outline-offset: -2px;
+}
+
+.architecture-services__rail a:focus-visible::before,
+.architecture-services__rail a:hover::before {
+    background-color: rgba(239, 255, 0, 0.12);
+}
+
+.architecture-services__partners {
+    position: absolute;
+    right: 18.8%;
+    bottom: 8.3rem;
+    left: 19.7%;
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.architecture-services__partners span {
+    display: flex;
+    max-width: 11rem;
+    align-items: center;
+    gap: 1rem;
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 650;
+    letter-spacing: 0.12em;
+    line-height: 1.25;
+    text-transform: uppercase;
+}
+
+.architecture-services__partners i {
+    font-size: 2.8rem;
+}
+.architecture-services__card--exterior { background-image: url("../images/body-09-courtyard-pond.png") !important; }
+.architecture-services__card--architecture { background-image: url("../images/body-14-architecture.webp") !important; }
+.architecture-services__card--residential { background-image: url("../images/body-03-serenity-room.png") !important; }
+.architecture-services__card--interior { background-image: url("../images/body-11-interior.webp") !important; }
+.international-awards {
+    min-height: 28.125rem;
+    background: #202020;
+    color: #f7f7f4;
+    font-family: "Manrope", Arial, Helvetica, sans-serif;
+}
+
+.international-awards__intro {
+    position: absolute;
+    top: 2.65rem;
+    left: 16.55%;
+    width: 27rem;
+}
+
+.international-awards__intro > p {
+    margin: 0 0 1.15rem;
+    color: #efff00;
+    font-size: 0.78rem;
+    font-weight: 650;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.international-awards h2 {
+    margin: 0;
+    font-size: 2.25rem;
+    font-weight: 650;
+    letter-spacing: 0;
+    line-height: 1.35;
+}
+
+.international-awards__intro > span {
+    display: block;
+    max-width: 25rem;
+    margin-top: 1.45rem;
+    color: #777;
+    font-size: 0.95rem;
+    letter-spacing: 0;
+    line-height: 1.75;
+}
+
+.international-awards__list {
+    position: absolute;
+    top: 2.2rem;
+    right: 16.55%;
+    width: 38.4%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.international-awards__list li {
+    border-bottom: 1px solid #454545;
+}
+
+.international-awards__list li:last-child {
+    border-bottom: 0;
+}
+
+.international-awards__list a {
+    display: grid;
+    grid-template-columns: 5.5rem minmax(13rem, 1.7fr) minmax(7rem, 0.8fr) 1rem;
+    gap: 1.6rem;
+    align-items: center;
+    min-height: 5.1rem;
+    color: #f7f7f4;
+    font-size: 1rem;
+    letter-spacing: 0;
+    text-decoration: none;
+}
+
+.international-awards__list b {
+    color: #efff00;
+    font-weight: 650;
+}
+
+.international-awards__list strong {
+    font-weight: 500;
+}
+
+.international-awards__list span {
+    color: #777;
+}
+
+.international-awards__list i {
+    font-size: 0.85rem;
+    transition: transform 180ms ease;
+}
+
+.international-awards__list a:focus-visible,
+.international-awards__list a:hover {
+    color: #efff00;
+    outline: none;
+}
+
+.international-awards__list a:focus-visible i,
+.international-awards__list a:hover i {
+    transform: translateX(0.35rem);
+}
+.recent-project-story {
+    min-height: 97.5rem;
+    overflow: hidden;
+    background: #191919;
+    color: #f8f8f5;
+    font-family: "Manrope", Arial, Helvetica, sans-serif;
+}
+
+.recent-project-story__feature {
+    position: absolute;
+    top: 1.45rem;
+    right: 16.55%;
+    left: 16.55%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 43.5rem;
+}
+
+.recent-project-story__feature figure {
+    position: relative;
+    height: 43.5rem;
+    margin: 0;
+    overflow: hidden;
+    background: #333;
+}
+
+.recent-project-story__feature figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 180ms ease;
+}
+
+.recent-project-story__feature figure img.is-changing {
+    opacity: 0.45;
+}
+
+.recent-project-story__label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    width: 3.15rem;
+    height: 16.9rem;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background: #efff00;
+    color: #171717;
+    font-size: 0.78rem;
+    font-weight: 650;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+
+.recent-project-story__feature article {
+    align-self: center;
+    min-height: 22.8rem;
+    padding: 5.1rem 4.85rem;
+    background: #fff;
+    color: #171717;
+}
+
+.recent-project-story__feature article > p {
+    margin: 0 0 0.8rem;
+    font-size: 0.82rem;
+    font-weight: 650;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.recent-project-story__feature h2 {
+    margin: 0;
+    font-family: "Bodoni Moda", Georgia, serif;
+    font-size: 3.1rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1.05;
+}
+
+.recent-project-story__feature article > span {
+    display: block;
+    max-width: 27rem;
+    margin-top: 1.4rem;
+    color: #6b6b6b;
+    font-size: 1rem;
+    letter-spacing: 0;
+    line-height: 1.7;
+}
+
+.recent-project-story__feature article > a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin-top: 1.45rem;
+    color: #171717;
+    font-size: 0.82rem;
+    font-weight: 650;
+    letter-spacing: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.recent-project-story__feature article > a:focus-visible,
+.recent-project-story__feature article > a:hover {
+    color: #6a7200;
+}
+
+.recent-project-story__project-controls {
+    position: absolute;
+    right: 50%;
+    bottom: 0;
+    z-index: 3;
+    display: grid;
+}
+
+.recent-project-story__project-controls button {
+    display: grid;
+    width: 4.75rem;
+    height: 4.75rem;
+    place-items: center;
+    border: 0;
+    border-bottom: 1px solid #666;
+    background: #191919;
+    color: #fff;
+    cursor: pointer;
+}
+
+.recent-project-story__project-controls button:last-child {
+    border-bottom: 0;
+}
+
+.recent-project-story__project-controls button:focus-visible,
+.recent-project-story__project-controls button:hover {
+    background: #efff00;
+    color: #171717;
+}
+
+.recent-project-story__metrics {
+    position: absolute;
+    top: 51rem;
+    right: 20.5%;
+    left: 21.3%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 4rem;
+    margin: 0;
+}
+
+.recent-project-story__metrics dt {
+    font-family: "Bodoni Moda", Georgia, serif;
+    font-size: 4.15rem;
+    letter-spacing: 0;
+    line-height: 1;
+}
+
+.recent-project-story__metrics dd {
+    margin: 0.65rem 0 0;
+    color: #efff00;
+    font-size: 0.82rem;
+    font-weight: 650;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.recent-project-story__testimonial {
+    position: absolute;
+    top: 62.5rem;
+    right: 24.8%;
+    left: 24.8%;
+    display: grid;
+    grid-template-columns: 3rem 1fr 3rem;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.recent-project-story__testimonial button {
+    border: 0;
+    background: transparent;
+    color: #fff;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+.recent-project-story__testimonial button:focus-visible,
+.recent-project-story__testimonial button:hover {
+    color: #efff00;
+    outline: none;
+}
+
+.recent-project-story__testimonial blockquote {
+    margin: 0;
+    color: #737373;
+    font-family: "Bodoni Moda", Georgia, serif;
+    font-size: 2rem;
+    letter-spacing: 0;
+    line-height: 1.45;
+    text-align: center;
+}
+
+.recent-project-story__testimonial blockquote strong {
+    color: #efff00;
+    font-weight: 500;
+}
+
+.recent-project-story__progress {
+    position: absolute;
+    top: 74.7rem;
+    left: 42.1%;
+    display: flex;
+    width: 15.5rem;
+    align-items: center;
+    gap: 1rem;
+    color: #777;
+    font-size: 0.8rem;
+}
+
+.recent-project-story__progress i {
+    position: relative;
+    flex: 1;
+    height: 1px;
+    background: #666;
+}
+
+.recent-project-story__progress i::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 34%;
+    height: 1px;
+    background: #efff00;
+}
+
+.recent-project-story__seal {
+    position: absolute;
+    right: 20.7%;
+    bottom: 7.25rem;
+    z-index: 2;
+    display: grid;
+    width: 11.7rem;
+    height: 11.7rem;
+    place-items: center;
+    border: 1.2rem solid #fff;
+    border-radius: 50%;
+    background: #efff00;
+    color: #171717;
+    text-align: center;
+}
+
+.recent-project-story__seal span {
+    font-size: 3.8rem;
+    font-weight: 700;
+    letter-spacing: 0;
+}
+
+.recent-project-story__seal small {
+    position: absolute;
+    top: -1rem;
+    width: 8rem;
+    color: #171717;
+    font-size: 0.6rem;
+    font-weight: 650;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transform: rotate(-12deg);
+}
+
+.recent-project-story__outline {
+    position: absolute;
+    right: 3%;
+    bottom: -2.6rem;
+    left: 3%;
+    margin: 0;
+    color: transparent;
+    font-size: 12rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1;
+    white-space: nowrap;
+    -webkit-text-stroke: 2px #262626;
+}
+.architecture-journal {
+    min-height: 53.55rem;
+    overflow: hidden;
+    background: #191919;
+    color: #f8f8f5;
+    font-family: "Manrope", Arial, Helvetica, sans-serif;
+}
+
+.architecture-journal header {
+    position: absolute;
+    top: 4.3rem;
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+}
+
+.architecture-journal header p {
+    margin: 0 0 0.8rem;
+    color: #efff00;
+    font-size: 0.78rem;
+    font-weight: 650;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.architecture-journal h2 {
+    margin: 0;
+    font-size: 2.35rem;
+    font-weight: 650;
+    letter-spacing: 0;
+}
+
+.architecture-journal__grid {
+    position: absolute;
+    top: 11.85rem;
+    right: 16.55%;
+    left: 16.55%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.65rem;
+}
+
+.architecture-journal article,
+.architecture-journal article a {
+    position: relative;
+    display: block;
+    height: 23.65rem;
+    overflow: hidden;
+}
+
+.architecture-journal article a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.architecture-journal article a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 40%, rgba(0, 0, 0, 0.88) 100%);
+}
+
+.architecture-journal article img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 450ms ease;
+}
+
+.architecture-journal article span,
+.architecture-journal article h3 {
+    position: absolute;
+    z-index: 1;
+}
+
+.architecture-journal article span {
+    top: 3.4rem;
+    left: 3.15rem;
+    padding: 0.55rem 1.25rem;
+    border-radius: 999px;
+    background: #fff;
+    color: #171717;
+    font-size: 0.7rem;
+    font-weight: 650;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+.architecture-journal article h3 {
+    right: 3.1rem;
+    bottom: 3.2rem;
+    left: 3.1rem;
+    margin: 0;
+    font-size: 1.35rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 1.35;
+}
+
+.architecture-journal article a:focus-visible,
+.architecture-journal article a:hover {
+    outline: 2px solid #efff00;
+    outline-offset: -2px;
+}
+
+.architecture-journal article a:focus-visible img,
+.architecture-journal article a:hover img {
+    transform: scale(1.03);
+}
+
+.architecture-journal__outline {
+    position: absolute;
+    right: 14%;
+    bottom: -2.25rem;
+    left: 14%;
+    margin: 0;
+    color: transparent;
+    font-size: 11.5rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1;
+    text-align: center;
+    -webkit-text-stroke: 2px #242424;
+}
+.selected-works-grid {
+    min-height: 116.2rem;
+    background: #fff;
+    color: #151923;
+    font-family: "Manrope", Arial, Helvetica, sans-serif;
+}
+
+.selected-works-grid header {
+    position: absolute;
+    top: 8.9rem;
+    left: 5.85%;
+}
+
+.selected-works-grid header p {
+    margin: 0 0 1.3rem;
+    color: #8d8657;
+    font-size: 0.68rem;
+    font-weight: 650;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+}
+
+.selected-works-grid h2 {
+    margin: 0;
+    font-size: 4.1rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.08;
+}
+
+.selected-works-grid__commission {
+    position: absolute;
+    top: 17.8rem;
+    right: 4.7%;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: #151923;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    text-decoration: none;
+}
+
+.selected-works-grid__commission i {
+    transform: rotate(45deg);
+}
+
+.selected-works-grid__commission:focus-visible,
+.selected-works-grid__commission:hover {
+    color: #8d8657;
+}
+
+.selected-works-grid__item {
+    position: absolute;
+}
+
+.selected-works-grid__item a {
+    display: block;
+    color: #151923;
+    text-decoration: none;
+}
+
+.selected-works-grid__item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 1.35rem;
+    object-fit: cover;
+    transition: transform 450ms ease;
+}
+
+.selected-works-grid__item footer {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1.15rem;
+}
+
+.selected-works-grid__item h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: 0;
+}
+
+.selected-works-grid__item footer span {
+    color: #737373;
+    font-size: 0.75rem;
+    letter-spacing: 0;
+}
+
+.selected-works-grid__item a:focus-visible,
+.selected-works-grid__item a:hover {
+    color: #8d8657;
+    outline: none;
+}
+
+.selected-works-grid__item a:focus-visible img,
+.selected-works-grid__item a:hover img {
+    transform: scale(0.992);
+}
+
+.selected-works-grid__item--coast {
+    top: 22.35rem;
+    left: 5.85%;
+    width: 51.35%;
+}
+
+.selected-works-grid__item--coast img {
+    height: 38.8rem;
+}
+
+.selected-works-grid__item--gallery {
+    top: 22.35rem;
+    right: 4.65%;
+    width: 35.85%;
+}
+
+.selected-works-grid__item--gallery img {
+    height: 31rem;
+}
+
+.selected-works-grid__item--material {
+    top: 62.95rem;
+    left: 5.85%;
+    width: 35.9%;
+}
+
+.selected-works-grid__item--material img {
+    height: 31.1rem;
+}
+
+.selected-works-grid__item--horizon {
+    top: 62.95rem;
+    right: 4.65%;
+    width: 51.2%;
+}
+
+.selected-works-grid__item--horizon img {
+    height: 38.75rem;
+}
+.studio-belief {
+    min-height: 41.875rem;
+    background: linear-gradient(to bottom, #f4f4f4 0 85.5%, #fff 85.5% 100%);
+    color: #151923;
+    font-family: "Manrope", Arial, Helvetica, sans-serif;
+}
+
+.studio-belief aside {
+    position: absolute;
+    top: 3.45rem;
+    left: 5.85%;
+}
+
+.studio-belief aside p {
+    margin: 0 0 1.55rem;
+    color: #8d8657;
+    font-size: 0.72rem;
+    font-weight: 650;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.studio-belief aside span {
+    color: #60646a;
+    font-size: 0.78rem;
+    letter-spacing: 0;
+    line-height: 1.8;
+}
+
+.studio-belief__statement {
+    position: absolute;
+    top: 3.35rem;
+    right: 4.7%;
+    width: 58%;
+}
+
+.studio-belief h2 {
+    margin: 0;
+    font-size: 3.35rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.08;
+}
+
+.studio-belief__statement > div {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3.2rem;
+    margin-top: 2.9rem;
+    padding-top: 2.4rem;
+    border-top: 1px solid #ddd;
+}
+
+.studio-belief__statement > div p {
+    margin: 0;
+    color: #62666c;
+    font-size: 0.85rem;
+    letter-spacing: 0;
+    line-height: 1.75;
+}
 @media (max-width: 991.98px) {
     .hero {
         min-height: 640px;
@@ -5165,6 +6020,319 @@ a {
 
     .modernity-film__panel > p {
         font-size: 6rem;
+    }
+}
+@media (max-width: 991.98px) {
+    .architecture-services {
+        min-height: 0;
+        padding: 6rem 0;
+    }
+
+    .architecture-services__header,
+    .architecture-services__rail,
+    .architecture-services__partners {
+        position: static;
+    }
+
+    .architecture-services__header {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 5vw;
+    }
+
+    .architecture-services__rail {
+        margin-top: 4rem;
+        padding: 0 5vw;
+    }
+
+    .architecture-services__partners {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        margin-top: 5rem;
+        padding: 0 5vw;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .architecture-services {
+        padding: 4.5rem 0;
+    }
+
+    .architecture-services__header,
+    .architecture-services__rail,
+    .architecture-services__partners {
+        padding-right: 1.25rem;
+        padding-left: 1.25rem;
+    }
+
+    .architecture-services h2 {
+        font-size: 2.05rem;
+    }
+
+    .architecture-services__rail a {
+        flex-basis: 19.5rem;
+        height: 27rem;
+    }
+
+    .architecture-services__partners {
+        grid-template-columns: 1fr;
+        gap: 2.25rem;
+    }
+}
+@media (max-width: 991.98px) {
+    .international-awards {
+        min-height: 0;
+        padding: 6rem 5vw;
+    }
+
+    .international-awards__intro,
+    .international-awards__list {
+        position: static;
+        width: 100%;
+    }
+
+    .international-awards__list {
+        margin-top: 4rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .international-awards {
+        padding: 4.5rem 1.25rem;
+    }
+
+    .international-awards h2 {
+        font-size: 2rem;
+    }
+
+    .international-awards__list a {
+        grid-template-columns: 4.2rem 1fr 1rem;
+        gap: 1rem;
+        min-height: 6.5rem;
+    }
+
+    .international-awards__list span {
+        display: none;
+    }
+}
+@media (max-width: 991.98px) {
+    .recent-project-story {
+        min-height: 0;
+        padding: 5rem 5vw 7rem;
+    }
+
+    .recent-project-story__feature,
+    .recent-project-story__metrics,
+    .recent-project-story__testimonial,
+    .recent-project-story__progress,
+    .recent-project-story__seal,
+    .recent-project-story__outline {
+        position: relative;
+        inset: auto;
+    }
+
+    .recent-project-story__feature {
+        grid-template-columns: 1fr;
+    }
+
+    .recent-project-story__feature article {
+        align-self: auto;
+    }
+
+    .recent-project-story__project-controls {
+        right: 0;
+        bottom: auto;
+        top: 34rem;
+    }
+
+    .recent-project-story__metrics {
+        margin-top: 5rem;
+    }
+
+    .recent-project-story__testimonial {
+        margin-top: 5rem;
+    }
+
+    .recent-project-story__progress {
+        margin: 3rem auto 0;
+    }
+
+    .recent-project-story__seal {
+        margin: 4rem 0 0 auto;
+    }
+
+    .recent-project-story__outline {
+        margin-top: -3rem;
+        font-size: 7rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .recent-project-story {
+        padding: 3rem 1.25rem 5rem;
+    }
+
+    .recent-project-story__feature figure {
+        height: 27rem;
+    }
+
+    .recent-project-story__feature article {
+        min-height: 0;
+        padding: 3rem 1.4rem;
+    }
+
+    .recent-project-story__feature h2 {
+        font-size: 2.45rem;
+    }
+
+    .recent-project-story__project-controls {
+        top: 20rem;
+    }
+
+    .recent-project-story__metrics {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2.5rem;
+    }
+
+    .recent-project-story__metrics dt {
+        font-size: 3.2rem;
+    }
+
+    .recent-project-story__testimonial {
+        grid-template-columns: 2rem 1fr 2rem;
+        gap: 0.7rem;
+    }
+
+    .recent-project-story__testimonial blockquote {
+        font-size: 1.4rem;
+    }
+
+    .recent-project-story__outline {
+        font-size: 4.5rem;
+    }
+}
+@media (max-width: 991.98px) {
+    .architecture-journal {
+        min-height: 0;
+        padding: 6rem 5vw 8rem;
+    }
+
+    .architecture-journal header,
+    .architecture-journal__grid,
+    .architecture-journal__outline {
+        position: relative;
+        inset: auto;
+    }
+
+    .architecture-journal header {
+        left: auto;
+        transform: none;
+    }
+
+    .architecture-journal__grid {
+        margin-top: 4rem;
+    }
+
+    .architecture-journal__outline {
+        margin-top: -1rem;
+        font-size: 7rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .architecture-journal {
+        padding: 4.5rem 1.25rem 6rem;
+    }
+
+    .architecture-journal__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .architecture-journal article,
+    .architecture-journal article a {
+        height: 28rem;
+    }
+
+    .architecture-journal__outline {
+        font-size: 4.5rem;
+    }
+}
+@media (max-width: 991.98px) {
+    .selected-works-grid {
+        min-height: 0;
+        padding: 7rem 5vw;
+    }
+
+    .selected-works-grid header,
+    .selected-works-grid__commission,
+    .selected-works-grid__item {
+        position: static;
+    }
+
+    .selected-works-grid__commission {
+        margin-top: 2.5rem;
+    }
+
+    .selected-works-grid__items {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 3.5rem 2rem;
+        margin-top: 4rem;
+    }
+
+    .selected-works-grid__item {
+        width: auto;
+    }
+
+    .selected-works-grid__item img {
+        height: auto;
+        aspect-ratio: 4 / 5;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .selected-works-grid {
+        padding: 4.5rem 1.25rem;
+    }
+
+    .selected-works-grid h2 {
+        font-size: 3rem;
+    }
+
+    .selected-works-grid__items {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 991.98px) {
+    .studio-belief {
+        min-height: 0;
+        padding: 6rem 5vw 8rem;
+        background: #f4f4f4;
+    }
+
+    .studio-belief aside,
+    .studio-belief__statement {
+        position: static;
+        width: 100%;
+    }
+
+    .studio-belief__statement {
+        margin-top: 4rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .studio-belief {
+        padding: 4.5rem 1.25rem;
+    }
+
+    .studio-belief h2 {
+        font-size: 2.65rem;
+    }
+
+    .studio-belief__statement > div {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
 }
 @media (prefers-reduced-motion: reduce) {

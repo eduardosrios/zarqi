@@ -281,6 +281,42 @@
         $button.closest(".modernity-film").toggleClass("is-playing", isPlaying)
             .find("[data-modernity-status]").text(isPlaying ? "Studio film playing" : "Studio film paused");
     });
+    const $recentProjectStory = $(".recent-project-story");
+
+    if ($recentProjectStory.length) {
+        const recentProjects = [
+            { type: "Architecture", title: "Leana Canon Residence", copy: "A quiet white pavilion composed around existing trees, precise edges, and warm evening light.", image: "assets/images/body-27-house.webp", alt: "White geometric residence framed by mature trees" },
+            { type: "Civic architecture", title: "Terracotta Forum", copy: "A public building shaped by deep shade, rhythmic fins, and a generous relationship to the street.", image: "assets/images/body-14-architecture.webp", alt: "Modern civic building with terracotta fins" },
+            { type: "Residential landscape", title: "Garden Heritage Pool", copy: "A restored residence and long pool brought together through planting, proportion, and everyday ritual.", image: "assets/images/body-20-project-03.webp", alt: "Restored white house beside a garden pool" }
+        ];
+        const recentQuotes = [
+            "Zarqi began as a collaborative architecture and landscape studio, and remains true to a transdisciplinary way of thinking. <strong>— Elliot Warren</strong>",
+            "We pursue buildings that feel inevitable in their setting: precise, calm, and generous in daily use. <strong>— Maria Gomez</strong>",
+            "Every project starts with listening, then becomes a clear sequence of material, light, and landscape decisions. <strong>— Amina Rahman</strong>"
+        ];
+        let recentProjectIndex = 0;
+        let recentQuoteIndex = 0;
+
+        $recentProjectStory.find("[data-recent-project-direction]").on("click", function () {
+            recentProjectIndex = (recentProjectIndex + Number($(this).data("recent-project-direction")) + recentProjects.length) % recentProjects.length;
+            const project = recentProjects[recentProjectIndex];
+            const $image = $recentProjectStory.find("[data-recent-project-image]");
+
+            $image.addClass("is-changing").attr({ src: project.image, alt: project.alt });
+            $recentProjectStory.find("[data-recent-project-type]").text(project.type);
+            $recentProjectStory.find("[data-recent-project-title]").text(project.title);
+            $recentProjectStory.find("[data-recent-project-copy]").text(project.copy);
+            $recentProjectStory.find("[data-recent-project-link]").attr({ href: `mailto:studio@zarqi.example?subject=${encodeURIComponent(project.title)}` });
+            $recentProjectStory.find("[data-recent-project-status]").text(`Project ${recentProjectIndex + 1} of ${recentProjects.length} selected`);
+            window.setTimeout(function () { $image.removeClass("is-changing"); }, 180);
+        });
+
+        $recentProjectStory.find("[data-recent-quote-direction]").on("click", function () {
+            recentQuoteIndex = (recentQuoteIndex + Number($(this).data("recent-quote-direction")) + recentQuotes.length) % recentQuotes.length;
+            $recentProjectStory.find("[data-recent-quote]").html(recentQuotes[recentQuoteIndex]);
+            $recentProjectStory.find(".recent-project-story__progress span:first-child").text(String(recentQuoteIndex + 1).padStart(2, "0"));
+        });
+    }
     $(".hero__navigation a").on("click", function () {
         const navigation = document.getElementById("primaryNavigation");
 
