@@ -1,12 +1,12 @@
 /* Final responsive layer: preserve the reference compositions while closing
    transition-width and compact-phone gaps found in the Stage 06 audit. */
 
-:where(
+:is(
     .selected-projects__all,
     .vision-cta__link,
     .studio-manifesto__footer a,
     .project-mosaic__card > a,
-    .recent-project-story__frame article > a,
+    .recent-project-story__feature article > a,
     .selected-works-grid__commission,
     .site-footer__links > a,
     .site-footer__studios > a
@@ -34,6 +34,10 @@
     align-items: center;
     justify-content: center;
 }
+.hero__menu-button {
+    width: var(--zarqi-control);
+    min-width: var(--zarqi-control);
+}
 
 @media (max-width: 74.999rem) {
     .services-index__layout {
@@ -44,6 +48,14 @@
 
     .services-index__intro img {
         display: none;
+    }
+    .studio-figures__layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 4rem;
+    }
+
+    .studio-figures__facts > p {
+        max-width: 42rem;
     }
 
     .project-gallery__filters {
@@ -190,6 +202,19 @@
     .selected-works-grid h2,
     .speaking-spaces h2 {
         font-size: 2.65rem;
+    }
+    .expertise-accordion__heading {
+        justify-content: space-between;
+        min-width: 0;
+    }
+
+    .expertise-accordion__heading h2 {
+        min-width: 0;
+        font-size: 3.15rem;
+    }
+
+    .expertise-accordion__heading .section-index {
+        flex: 0 0 auto;
     }
 
     .design-reasons h2 {
